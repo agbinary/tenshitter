@@ -21,15 +21,15 @@ GEM
     builder (3.1.4)
     i18n (0.6.9)
     minitest (4.7.5)
-    multi_json (1.9.2)
+    multi_json (1.9.0)
     mysql2 (0.3.15)
-    rake (10.1.1)
-    thread_safe (0.3.1)
+    rake (0.9.2.2)
+    thread_safe (0.3.0)
       atomic (>= 1.1.7, < 2)
     tzinfo (0.3.39)
 
 PLATFORMS
-  ruby
+  x86-mingw32
 
 DEPENDENCIES
   activerecord

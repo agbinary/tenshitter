@@ -2,7 +2,7 @@ require 'active_record'
 require 'logger'
 
 begin
-require './env'
+  require './env'
 rescue LoadError
 end
 
