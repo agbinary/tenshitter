@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :user_name
       t.datetime :deleted_at
-      t.timestamp
+      t.timestamps
     end
   end
 end
