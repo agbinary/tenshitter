@@ -1,6 +1,3 @@
-require 'active_record'
-require 'logger'
-
 begin
   require './env'
 rescue LoadError
@@ -8,9 +5,8 @@ end
 
 namespace :db do
   task :environment do
+    require "./environment"
     MIGRATIONS_DIR = ENV['MIGRATIONS_DIR'] || 'db/migrations'
-    ActiveRecord::Base.establish_connection(ENV["DATABASE_URL"])
-    ActiveRecord::Base.logger = Logger.new(STDOUT)
   end
 
   desc 'Migrate the database'
