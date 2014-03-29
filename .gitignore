@@ -18,3 +18,4 @@ _yardoc
 doc/
 env.rb
 .idea
+db/*.sqlite3
