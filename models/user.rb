@@ -1,3 +1,5 @@
+require 'active_record'
+
 class User < ActiveRecord::Base
   has_many :tenshis, :dependent => :destroy
   has_many :follower_relationships, :class_name => "Relationship", :foreign_key => :following_id
@@ -12,3 +14,9 @@ class User < ActiveRecord::Base
   validates :email, format: { :with => valid_email , message: "Invalid format" }
   validates :email, uniqueness: {case_sensitive: false ,message: "Email address is already registered"}
 end
+
+def sign_up
+  User.create(name: "Angela Guette", email: "ang3l@hotmail.com", password: "qwerty", username: "angelaguette")
+end
+
+sign_up
