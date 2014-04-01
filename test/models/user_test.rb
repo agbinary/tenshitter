@@ -5,10 +5,11 @@ require_relative "../../models/relationship"
 
 
 class UserTest < MiniTest::Unit::TestCase
-  def test_tenshi
-    u = User.create(name: "Angela Guette", email: "ang3l_gu@hotmail.com", password: "qwerty", username: "angelaguette")
-    t = u.tenshis.create(:message => "Hola")
-    t.save
+  def test_tenshee
+    user = User.create(name: "Angela Guette", email: "ang3l_gu@hotmail.com", password: "qwerty", username: "angelaguette")
+    user.tenshee("Hola")
 
+    assert 1, user.tenshis.count
+    assert "Hola", user.tenshis.last.message
   end
 end
