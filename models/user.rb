@@ -1,5 +1,3 @@
-require 'active_record'
-
 class User < ActiveRecord::Base
   has_many :tenshis, :dependent => :destroy
   has_many :follower_relationships, :class_name => "Relationship", :foreign_key => :following_id
