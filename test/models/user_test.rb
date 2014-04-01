@@ -7,7 +7,8 @@ require_relative "../../models/relationship"
 class UserTest < MiniTest::Unit::TestCase
   def test_tenshi
     u = User.create(name: "Angela Guette", email: "ang3l_gu@hotmail.com", password: "qwerty", username: "angelaguette")
-    u.message("Hola")
-  end
+    t = u.tenshis.create(:message => "Hola")
+    t.save
 
+  end
 end
