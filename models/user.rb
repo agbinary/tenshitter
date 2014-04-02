@@ -16,9 +16,9 @@ class User < ActiveRecord::Base
     self.tenshis.create(message: message)
   end
 
-  def retenshi(tenshi_id)
+  def retenshee(tenshi_id)
     tenshi = Tenshi.find(tenshi_id)
-    self.tenshis.create(message: "RT @#{self.username}: #{tenshi.message}", tenshi_id: tenshi_id)
+    self.tenshis.create(message: "RT @#{tenshi.user.username}: #{tenshi.message}", tenshi_id: tenshi_id)
   end
 
   def reply(message, reply_id)
@@ -27,5 +27,10 @@ class User < ActiveRecord::Base
 
   def follow(other_user)
     Relationship.create(follower: self, following: other_user)
+  end
+
+  def unfollow(other_user)
+    id = Relationship.find_by(follower: self, following: other_user)
+    id.destroy
   end
 end
