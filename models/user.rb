@@ -12,7 +12,20 @@ class User < ActiveRecord::Base
   validates :email, format: { :with => valid_email , message: "Invalid format" }
   validates :email, uniqueness: {case_sensitive: false ,message: "Email address is already registered"}
 
-  def tenshi(message)
+  def tenshee(message)
     self.tenshis.create(message: message)
+  end
+
+  def retenshi(tenshi_id)
+    tenshi = Tenshi.find(tenshi_id)
+    self.tenshis.create(message: "RT @#{self.username}: #{tenshi.message}", tenshi_id: tenshi_id)
+  end
+
+  def reply(message, reply_id)
+    self.tenshis.create(message: "RE: #{message}", in_reply_to: reply_id)
+  end
+
+  def follow(other_user)
+    Relationship.create(follower: self, following: other_user)
   end
 end
