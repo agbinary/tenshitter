@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
   end
 
   def unfollow(other_user)
-    id = Relationship.find_by(follower: self, following: other_user)
-    id.destroy
+    r = Relationship.find_by(follower: self, following: other_user)
+    r.destroy
   end
 end
