@@ -1,3 +1,5 @@
+require 'active_record'
+
 class User < ActiveRecord::Base
   has_many :tenshis, :dependent => :destroy
   has_many :follower_relationships, :class_name => "Relationship", :foreign_key => :following_id
@@ -11,6 +13,7 @@ class User < ActiveRecord::Base
   valid_email = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, format: { :with => valid_email , message: "Invalid format" }
   validates :email, uniqueness: {case_sensitive: false ,message: "Email address is already registered"}
+
 
   def tenshee(message)
     self.tenshis.create(message: message)
@@ -30,7 +33,7 @@ class User < ActiveRecord::Base
   end
 
   def unfollow(other_user)
-    id = Relationship.find_by(follower: self, following: other_user)
-    id.destroy
+    r = Relationship.find_by(follower: self, following: other_user)
+    r.destroy
   end
 end
