@@ -16,6 +16,10 @@ class TenshitterApp < Nancy::Base
     render "public/form.html"
   end
 
+  get "/timeline" do
+    render "public/timeline.html"
+  end
+
   post "/users" do
     if User.create(name: params["name"], email: params["email"], password: params["password"], username: params["username"])
       render "public/index.html"
@@ -25,10 +29,18 @@ class TenshitterApp < Nancy::Base
   end
 
   post "/login" do
-    if User.find_by(username: params["username"], password: params["password"])
+    if user = User.find_by(username: params["username"], password: params["password"])
+      $id = user.id
       render "public/timeline.html"
     else
       render
+    end
+  end
+
+  post "/timeline" do
+    user = User.find_by($id)
+    if user.tenshee(params["tenshi"])
+      render "public/timeline.html"
     end
   end
 end
