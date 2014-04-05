@@ -1,4 +1,5 @@
 require 'rack/utils'
+require 'rack'
 require 'nancy'
 require './environment'
 require_relative 'models/user'
@@ -6,41 +7,39 @@ require_relative 'models/user'
 
 class TenshitterApp < Nancy::Base
   include Nancy::Render
-  use Rack::Static, :urls => ["/js", "/css", "/fonts", "/images"], :root => "public"
 
   get "/" do
-    render "public/index.html"
+    render "views/index.html"
   end
 
   get "/users" do
-    render "public/form.html"
+    render "views/form.html"
   end
 
   get "/timeline" do
-    render "public/timeline.html"
+    render "views/timeline.html"
   end
 
   post "/users" do
     if User.create(name: params["name"], email: params["email"], password: params["password"], username: params["username"])
-      render "public/index.html"
+      render "views/index.html"
     else
-      render
+      render "views/index_error.html"
     end
   end
 
+
   post "/login" do
-    if user = User.find_by(username: params["username"], password: params["password"])
-      $id = user.id
-      render "public/timeline.html"
+    if User.find_by(username: params["username"], password: params["password"])
+      render "views/timeline.html"
     else
-      render
+      render "views/index_error.html"
     end
   end
 
   post "/timeline" do
-    user = User.find_by($id)
     if user.tenshee(params["tenshi"])
-      render "public/timeline.html"
+      render "views/timeline.html"
     end
   end
 end

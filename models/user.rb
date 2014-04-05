@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
   validates :username, presence: true
   valid_email = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, format: { :with => valid_email , message: "Invalid format" }
+  validates :username, uniqueness: {case_sensitive: false ,message: "Username is already taken"}
   validates :email, uniqueness: {case_sensitive: false ,message: "Email address is already registered"}
-
 
   def tenshee(message)
     self.tenshis.create(message: message)
