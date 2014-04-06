@@ -1,12 +1,13 @@
-require 'rack/utils'
 require 'nancy'
+require 'nancy/render'
 require './environment'
 require_relative 'models/user'
 
 
 class TenshitterApp < Nancy::Base
   include Nancy::Render
-  use Rack::Session::Cookie
+  use Rack::Session::Cookie, secret: ENV['SECRET_TOKEN']
+  use Rack::Static, :root => "public", :urls => ["/js", "/css", "/fonts", "/images"]
 
   get "/" do
     render "views/index.html"
