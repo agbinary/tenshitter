@@ -35,16 +35,31 @@
     <br />
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-            <form action="/login" method="post" role="form">
+            <form action="/users" method="post" role="form">
+              <% if session["error_form_message"] %>
+                  <%= session.delete("error_form_message") %>
+                  <img src="/images/error.jpg">
+              <% end %>
+              <br /><br />
                 <div class="form-group">
+                    <label for="txtName">Name</label>
+                    <input type="text" class="form-control" id="txtName" placeholder="Full name" name="name"/>
+                </div>
+                <div class="form-group">
+                    <label for="txtEmail">E-mail</label>
+                    <input type="text" class="form-control" id="txtEmail" placeholder="Enter email" name="email"/>
+                </div>
+                <div class="form-group">
+                    <label for="txtPassword">Password</label>
+                    <input type="password" class="form-control" id="txtPassword" placeholder="Password" name="password"/>
+                </div>
+                <div class="form-group">
+                    <label for="txtUsername">Username</label>
                     <input type="text" class="form-control" id="txtUsername" placeholder="Username" name="username"/>
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="txtPasswordUser" placeholder="Password" name="password"/>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" name="users" class="btn btn-primary">Sign up for Tenshitter</button>
                 <br /><br /><br />
-                New to Tenshitter? <a href="/users"> Sign Up </a>
+                Do you have an account? <a href="/"> Sign In </a>
             </form>
         </div>
     </div>
