@@ -46,7 +46,8 @@ class TenshitterApp < Nancy::Base
   end
 
   post "/timeline" do
-    if User.tenshee(params["tenshi"])
+    u= User.find(session["user_id"])
+    if u.tenshee(params["tenshi"])
       render "views/timeline.erb"
     end
   end

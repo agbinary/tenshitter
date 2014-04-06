@@ -6,7 +6,7 @@ gem 'activerecord'
 gem 'mysql2'
 gem 'sqlite3'
 
-gem 'nancy'
+gem 'nancy', github: 'guilleiguaran/nancy'
 gem 'tilt'
 
 gem "minitest", :group => :test

@@ -1,3 +1,3 @@
 require "./tenshitter_app"
 
-run TenshitterApp
+run TenshitterApp.new
