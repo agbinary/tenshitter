@@ -1,5 +1,4 @@
 require 'rack/utils'
-require 'rack'
 require 'nancy'
 require './environment'
 require_relative 'models/user'
@@ -7,6 +6,7 @@ require_relative 'models/user'
 
 class TenshitterApp < Nancy::Base
   include Nancy::Render
+  use Rack::Session::Cookie
 
   get "/" do
     render "views/index.html"
@@ -21,16 +21,19 @@ class TenshitterApp < Nancy::Base
   end
 
   post "/users" do
-    if User.create(name: params["name"], email: params["email"], password: params["password"], username: params["username"])
-      render "views/index.html"
+    user = User.create(name: params["name"], email: params["email"], password: params["password"], username: params["username"])
+    begin
+      User.find(user.id)
+    rescue ActiveRecord::RecordNotFound
+      render "views/form_error.html"
     else
-      render "views/index_error.html"
+      render "views/index.html"
     end
   end
 
 
   post "/login" do
-    if User.find_by(username: params["username"], password: params["password"])
+    if $u = User.find_by(username: params["username"], password: params["password"])
       render "views/timeline.html"
     else
       render "views/index_error.html"
@@ -38,8 +41,9 @@ class TenshitterApp < Nancy::Base
   end
 
   post "/timeline" do
-    if user.tenshee(params["tenshi"])
+    if $u.tenshee(params["tenshi"])
       render "views/timeline.html"
     end
   end
+
 end

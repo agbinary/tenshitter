@@ -35,17 +35,25 @@
     <br />
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-            <form action="/login" method="post" role="form">
-                <span style="color: darkgrey;">Wrong username and password combination! <img src="/images/error.jpg"> <br /><br /><br /></span>
+            <form action="/users" method="post" role="form">
+                <span style="color: darkgrey;">Missing or invalid data, please check the errors and try again <img src="/images/error.jpg"> <br /><br /><br /></span>
                 <div class="form-group">
+                    <label for="txtName">Name</label>
+                    <input type="text" class="form-control" id="txtName" placeholder="Full name" name="name"/>
+                </div>
+                <div class="form-group">
+                    <label for="txtEmail">E-mail</label>
+                    <input type="text" class="form-control" id="txtEmail" placeholder="Enter email" name="email"/>
+                </div>
+                <div class="form-group">
+                    <label for="txtPassword">Password</label>
+                    <input type="password" class="form-control" id="txtPassword" placeholder="Password" name="password"/>
+                </div>
+                <div class="form-group">
+                    <label for="txtUsername">Username</label>
                     <input type="text" class="form-control" id="txtUsername" placeholder="Username" name="username"/>
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="txtPasswordUser" placeholder="Password" name="password"/>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-                <br /><br /><br />
-                New to Tenshitter? <a href="/users"> Sign Up </a>
+                <button type="submit" name="users" class="btn btn-primary">Sign up for Tenshitter</button>
             </form>
         </div>
     </div>
