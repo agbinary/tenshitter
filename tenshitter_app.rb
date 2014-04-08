@@ -43,7 +43,7 @@ class TenshitterApp < Nancy::Base
   post "/login" do
     if user = User.find_by(username: params["username"], password: params["password"])
       session["user_id"] = user.id
-      render "views/timeline.erb"
+      response.redirect("/timeline")
     else
       session["error_index_message"] = "The username/password combination is wrong"
       render "views/index.erb"
