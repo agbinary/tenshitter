@@ -19,6 +19,7 @@ class TenshitterApp < Nancy::Base
   end
 
   get "/timeline" do
+    @tenshis = Tenshi.all
     render "views/timeline.erb"
   end
 
