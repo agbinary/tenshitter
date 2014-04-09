@@ -27,15 +27,15 @@
 <div class="container" id="contenedor">
     <br />
     <div class="col-md-8" >
-      <table class="table table-hover">
-        <tr>
-          <% @tenshis.each do |tenshi| %>
-              <td>
-                <%= tenshi %><br /><br />
-              </td>
-          <% end %>
-        </tr>
-        </table>
+      <% @tenshis.each do |tenshi| %>
+          <table class="table table-hover">
+                <td>
+                    <%= tenshi %><br /><br />
+                    <button type="submit" name="retenshee" class="btn btn-primary btn-xs">Retenshee</button>
+                    <button type="submit" name="reply" class="btn btn-primary btn-xs">Reply</button>
+                </td>
+            </table>
+        <% end %>
       <br /><br />
     </div>
     <div class="col-md-4" >

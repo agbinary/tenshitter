@@ -10,11 +10,6 @@ class TenshitterApp < Nancy::Base
   use Rack::Session::Cookie, secret: ENV['SECRET_TOKEN']
   use Rack::Static, :root => "public", :urls => ["/js", "/css", "/fonts", "/images"]
 
-  get "/ping" do
-    @ping = "lol"
-    render "views/ping.erb"
-  end
-
   get "/" do
     render "views/index.erb"
   end
@@ -24,7 +19,9 @@ class TenshitterApp < Nancy::Base
   end
 
   get "/timeline" do
-    @tenshis = Tenshi.all
+    u = User.find(session["user_id"])
+    followings = u.followings << u
+    @tenshis = Tenshi.where(user_id: followings).order('created_at DESC').limit('20')
     render "views/timeline.erb"
   end
 
@@ -43,7 +40,7 @@ class TenshitterApp < Nancy::Base
   post "/login" do
     if user = User.find_by(username: params["username"], password: params["password"])
       session["user_id"] = user.id
-      render "views/timeline.erb"
+      response.redirect("/timeline")
     else
       session["error_index_message"] = "The username/password combination is wrong"
       render "views/index.erb"
@@ -54,7 +51,7 @@ class TenshitterApp < Nancy::Base
   post "/timeline" do
     u= User.find(session["user_id"])
     if u.tenshee(params["tenshi"])
-      render "views/timeline.erb"
+      response.redirect("/timeline")
     end
   end
 
