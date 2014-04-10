@@ -14,15 +14,15 @@ class TenshitterApp < Nancy::Base
     render "views/index.erb"
   end
 
-  get "/users" do
+  get "/users/new" do
     render "views/form.erb"
   end
 
-  get "/timeline" do
+  get "/tenshis" do
     u = User.find(session["user_id"])
     followings = u.followings << u
     @tenshis = Tenshi.where(user_id: followings).order('created_at DESC').limit('20')
-    render "views/timeline.erb"
+    render "views/tenshis.erb"
   end
 
   post "/users" do
@@ -40,7 +40,7 @@ class TenshitterApp < Nancy::Base
   post "/login" do
     if user = User.find_by(username: params["username"], password: params["password"])
       session["user_id"] = user.id
-      response.redirect("/timeline")
+      response.redirect("/tenshis")
     else
       session["error_index_message"] = "The username/password combination is wrong"
       render "views/index.erb"
@@ -48,11 +48,16 @@ class TenshitterApp < Nancy::Base
 
   end
 
-  post "/timeline" do
-    u= User.find(session["user_id"])
+  post "/tenshis" do
+    u = User.find(session["user_id"])
     if u.tenshee(params["tenshi"])
-      response.redirect("/timeline")
+      response.redirect("/tenshis")
     end
+  end
+
+  post "/tenshis/:tenshi_id/retenshee" do
+    u = User.find(session["user_id"])
+    u.retenshee(params["tenshi_id"])
   end
 
 end
