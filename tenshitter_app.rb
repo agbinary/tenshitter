@@ -60,4 +60,9 @@ class TenshitterApp < Nancy::Base
     u.retenshee(params["tenshi_id"])
   end
 
+  post "/tenshis/:reply_id/reply" do
+    u = User.find(session["user_id"])
+    u.reply(params["message"], params["reply_id"])
+  end
+
 end
