@@ -22,13 +22,13 @@ class TenshitterApp < Nancy::Base
     u = User.find(session["user_id"])
     @username=u.username
     followings = u.followings << u
-    @tenshis = Tenshi.where(user_id: followings).order('created_at DESC').limit('30')
+    @tenshis = Tenshi.where(user_id: followings, deleted_at: nil).order('created_at DESC').limit('30')
     render "views/tenshis.erb"
   end
 
   get "/username" do
     u = User.find(session["user_id"])
-    @tenshis = Tenshi.where(user_id: u).order('created_at DESC').limit('30')
+    @tenshis = Tenshi.where(user_id: u, deleted_at: nil).order('created_at DESC').limit('30')
     render "views/username.erb"
   end
 
