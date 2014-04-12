@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Bienvenido a Tenshitter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+  <script type="text/javascript" src="/js/funciones.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="/js/sexyalertbox.v1.2.jquery.js"></script>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/sexyalertbox.css"/>
+  <style type="text/css">
+
+      html {
+          background: url(/images/background.jpg) no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+      }
+      body{
+          background-color: transparent;
+
+          color:black;
+      }
+      h1 small{
+          color:333;
+      }
+  </style>
+</head>
+<body>
+<div class="container" id="contenedor">
+  <br />
+  <div class="col-md-8" >
+    <% @tenshis.each do |tenshi| %>
+        <table class="table table-hover">
+          <td>
+            <%= tenshi %><br /><br />
+            <input type="button" class="btn btn-primary btn-xs" onclick="retenshee(<%= tenshi.id %>);" value="Retenshee" />
+            <input type="button" class="btn btn-primary btn-xs" onclick="reply(<%= tenshi.id %>);" value="Reply" />
+            <input type="button" class="btn btn-primary btn-xs" onclick="delete_tenshi(<%= tenshi.id %>);" value="Delete" />
+          </td>
+        </table>
+    <% end %>
+    <br /><br />
+  </div>
+  <div class="col-md-4" >
+    <a href="/tenshis"><h2><img src="/images/botton_home.jpg">Home </h2></a>
+
+  </div>
+</div>
+</body>
+</html>

@@ -36,3 +36,19 @@ function reply(reply_id)
         }
     });
 }
+
+function delete_tenshi(delete_id)
+{   $.ajax({
+        type:"POST",
+        url: "/username/"+delete_id+"/delete",
+        data:{delete_id:delete_id},
+
+        dataType:'text',
+        success:function(){
+            Sexy.confirm("Your tenshi has been deleted!");
+        },
+        error:function(){
+            Sexy.error("Error");
+        }
+    });
+}
