@@ -4,6 +4,6 @@ class Tenshi < ActiveRecord::Base
   validates :message, length: {in: 1..280 , message: "Must be 280 characters or less"}
 
   def to_s
-    "#{user.username}: #{message}"
+    "<h4 class = 'color_h4'>#{user.username}:</h4> #{message}"
   end
 end

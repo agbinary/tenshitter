@@ -1,0 +1,12 @@
+<table id = "tabla_tenshis" class="table table-hover">
+    <% @tenshis_news.each do |tenshi| %>
+        <tr class="trtenshi">
+          <td>
+            <%= tenshi %><br /><br />
+            <input type="button" class="btn btn-primary btn-xs" onclick="retenshee(<%= tenshi.id %>);" value="Retenshee" />
+            <input type="button" class="btn btn-primary btn-xs" onclick="reply(<%= tenshi.id %>);" value="Reply" />
+          </td>
+        </tr>
+    <% end %>
+    <% session["last_tenshi_id"] = @tenshis_news.first.id %>
+</table>
