@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="/js/sexyalertbox.v1.2.jquery.js"></script>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/sexyalertbox.css"/>
+  <script type="text/javascript" src="/js/funciones.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
   <style type="text/css">
       html {
           background: url(/images/background.jpg) no-repeat center center fixed;
@@ -26,7 +32,7 @@
 <body>
 <div class="container" id="contenedor">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 text-center"><h1 class = "color_h4">Welcome to Tenshitter<br />
+    <div class="col-md-6 col-md-offset-3 text-center"><h1 class = "color_h4">Tenshitter<br />
       <small>Microblogging network</small>
     </h1>
     </div>
@@ -35,27 +41,30 @@
   <br />
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
-      <form action="/update_user" method="post" role="form">
+      <form action="/username/update_user" method="post" role="form">
         <br /><br />
         <div class="form-group">
           <label for="txtName">Name</label>
-          <input type="text" class="form-control" id="txtName" placeholder="Full name" name="name"/>
+          <input type="text" class="form-control" id="txtName" placeholder=<%= @u.name %> name="name"/>
         </div>
         <div class="form-group">
           <label for="txtEmail">E-mail</label>
-          <input type="text" class="form-control" id="txtEmail" placeholder="Enter email" name="email"/>
+          <input type="text" class="form-control" id="txtEmail" placeholder=<%= @u.email %> name="email"/>
         </div>
         <div class="form-group">
           <label for="txtPassword">Password</label>
-          <input type="password" class="form-control" id="txtPassword" placeholder="Password" name="password"/>
+          <input type="password" class="form-control" id="txtPassword" placeholder=<%= @u.password %> name="password"/>
         </div>
         <div class="form-group">
           <label for="txtUsername">Username</label>
-          <input type="text" class="form-control" id="txtUsername" placeholder="Username" name="username"/>
+          <input type="text" class="form-control" id="txtUsername" placeholder=<%= @u.username %> name="username"/>
         </div>
-        <button type="submit" name="users" class="btn btn-primary">Sign up for Tenshitter</button>
-        <br /><br /><br />
-        Do you have an account? <a href="/"> Sign In </a>
+        <br />
+        <input type="button" class="btn btn-primary" onclick="" value="Update my account" />
+        <br /><br />
+        <input type="button" class="btn btn-primary" onclick="delete_user(<%= @u.id %>);" value="Delete account" />
+        <br /><br />
+        <a href="/username"> Back </a>
       </form>
     </div>
   </div>

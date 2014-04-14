@@ -40,7 +40,7 @@ function reply(reply_id)
 function delete_tenshi(delete_id)
 {   $.ajax({
         type:"POST",
-        url: "/username/"+delete_id+"/delete",
+        url: "/username/"+delete_id+"/delete_tenshi",
         data:{delete_id:delete_id},
 
         dataType:'text',
@@ -55,22 +55,22 @@ function delete_tenshi(delete_id)
 
 function sign_out()
 {   $.ajax({
-    type:"POST",
-    url: "/username/signout",
+        type:"POST",
+        url: "/username/signout",
 
-    dataType:'text',
-    success:function(){
-        Sexy.alert("Your sesion has been closed", {onComplete:function(){location.href="/";}});
-    },
-    error:function(){
-        Sexy.error("Error");
-    }
-});
+        dataType:'text',
+        success:function(){
+            Sexy.alert("Your sesion has been closed", {onComplete:function(){location.href="/";}});
+        },
+        error:function(){
+            Sexy.error("Error");
+        }
+    });
 }
 $(document).ready(function(){
     setInterval(function(){
         new_tenshis();
-    },5000);
+    },10000);
 });
 
 function new_tenshis()
@@ -81,6 +81,22 @@ function new_tenshis()
         dataType:'html',
         success:function(r){
             $('#tabla_tenshis').prepend(r);
+        }
+    });
+}
+
+function delete_user(user_id)
+{   $.ajax({
+        type:"POST",
+        url: "/username/"+user_id+"/delete_user",
+        data:{user_id:user_id},
+
+        dataType:'text',
+        success:function(){
+            Sexy.confirm("Your account has been deleted!", {onComplete:function(){location.href="/";}});
+        },
+        error:function(){
+            Sexy.error("Error");
         }
     });
 }
