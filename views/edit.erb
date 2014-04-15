@@ -41,26 +41,26 @@
   <br />
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
-      <form action="/username/update_user" method="post" role="form">
+      <form action="/username/edit" method="post" role="form">
         <br /><br />
         <div class="form-group">
           <label for="txtName">Name</label>
-          <input type="text" class="form-control" id="txtName" placeholder=<%= @u.name %> name="name"/>
+          <input type="text" class="form-control" id="txtName" value=<%= @u.name %> name="name_edit"/>
         </div>
         <div class="form-group">
           <label for="txtEmail">E-mail</label>
-          <input type="text" class="form-control" id="txtEmail" placeholder=<%= @u.email %> name="email"/>
+          <input type="text" class="form-control" id="txtEmail" value=<%= @u.email %> name="email_edit"/>
         </div>
         <div class="form-group">
           <label for="txtPassword">Password</label>
-          <input type="password" class="form-control" id="txtPassword" placeholder=<%= @u.password %> name="password"/>
+          <input type="password" class="form-control" id="txtPassword" value=<%= @u.password %> name="password_edit"/>
         </div>
         <div class="form-group">
           <label for="txtUsername">Username</label>
-          <input type="text" class="form-control" id="txtUsername" placeholder=<%= @u.username %> name="username"/>
+          <input type="text" class="form-control" id="txtUsername" value=<%= @u.username %> name="username_edit"/>
         </div>
         <br />
-        <input type="button" class="btn btn-primary" onclick="" value="Update my account" />
+        <button type="submit" name="edit" class="btn btn-primary">Update my account</button>
         <br /><br />
         <input type="button" class="btn btn-primary" onclick="delete_user(<%= @u.id %>);" value="Delete account" />
         <br /><br />

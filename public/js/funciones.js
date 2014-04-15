@@ -39,8 +39,8 @@ function reply(reply_id)
 
 function delete_tenshi(delete_id)
 {   $.ajax({
-        type:"POST",
-        url: "/username/"+delete_id+"/delete_tenshi",
+        type:"DELETE",
+        url: "/tenshis/"+delete_id,
         data:{delete_id:delete_id},
 
         dataType:'text',
@@ -87,8 +87,8 @@ function new_tenshis()
 
 function delete_user(user_id)
 {   $.ajax({
-        type:"POST",
-        url: "/username/"+user_id+"/delete_user",
+        type:"DELETE",
+        url: "/"+user_id,
         data:{user_id:user_id},
 
         dataType:'text',

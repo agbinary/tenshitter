@@ -23,7 +23,7 @@ class TenshitterApp < Nancy::Base
     @username = u.username
     followings = u.followings << u
     @tenshis = Tenshi.where(user_id: followings, deleted_at: nil).order('created_at DESC').limit('30')
-    session["last_tenshi_id"] = @tenshis.first.id unless u.tenshis.count != 0
+    session["last_tenshi_id"] = @tenshis.first.id if u.tenshis.count != 0
     render "views/tenshis.erb"
   end
 
@@ -37,9 +37,9 @@ class TenshitterApp < Nancy::Base
     render "views/tenshis_news.erb"
   end
 
-  get "/username/update_user" do
+  get "/username/edit" do
     @u = User.find(session["user_id"])
-    render "views/update_user.erb"
+    render "views/edit.erb"
   end
 
   post "/users" do
@@ -82,7 +82,7 @@ class TenshitterApp < Nancy::Base
     u.reply(params["message"], params["reply_id"])
   end
 
-  post "/username/:delete_id/delete_tenshi" do
+  delete "/tenshis/:id" do
     id = Tenshi.find(params["delete_id"])
     id.update(deleted_at: Date.today)
   end
@@ -100,8 +100,14 @@ class TenshitterApp < Nancy::Base
     render "views/tenshis_news.erb"
   end
 
-  post "/username/:delete_id/delete_user" do
+  delete "/:username" do
     id = User.find(params["user_id"])
     id.update(deleted_at: Date.today)
+  end
+
+  post "/username/edit" do
+    u = User.find(session["user_id"])
+    u.update(name: params["name_edit"], email: params["email_edit"], password: params["password_edit"], username: params["username_edit"])
+    response.redirect("/username")
   end
 end
