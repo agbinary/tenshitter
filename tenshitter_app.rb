@@ -56,8 +56,8 @@ class TenshitterApp < Nancy::Base
 
   post "/login" do
     if user = User.find_by(username: params["username"], password: params["password"], deleted_at: nil)
-      session["user_id"] = user.id
-      response.redirect("/tenshis")
+        session["user_id"] = user.id
+        response.redirect("/tenshis")
     else
       session["error_index_message"] = "The username/password combination is wrong"
       render "views/index.erb"
@@ -109,5 +109,17 @@ class TenshitterApp < Nancy::Base
     u = User.find(session["user_id"])
     u.update(name: params["name_edit"], email: params["email_edit"], password: params["password_edit"], username: params["username_edit"])
     response.redirect("/username")
+  end
+
+  post "/username/search" do
+    if u2 = User.find_by(username: params["search"], deleted_at: nil)
+         u2 = u2.id
+         @username = params["search"]
+         @tenshis = Tenshi.where(user_id: u2, deleted_at: nil).order('created_at DESC').limit('30')
+         render "views/user.erb"
+    else
+         session["error_search_user"] = "No results for #{params["search"]}. Try again"
+         response.redirect("/username")
+    end
   end
 end

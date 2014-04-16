@@ -6,7 +6,7 @@ function retenshee(tenshi_id)
 
         dataType:'text',
         success:function(){
-            Sexy.confirm("Your retenshee has been sent!", {onComplete:function(){location.reload();}});
+            Sexy.confirm("Your retenshee has been sent!");
         },
         error:function(){
             Sexy.error("Error");
@@ -26,7 +26,7 @@ function reply(reply_id)
 
                     dataType:'text',
                     success:function(){
-                        Sexy.confirm("Your tenshi has been sent!", {onComplete:function(){location.reload();}});
+                        Sexy.confirm("Your tenshi has been sent!");
                     },
                     error:function(){
                         Sexy.error("Error");
@@ -45,7 +45,7 @@ function delete_tenshi(delete_id)
 
         dataType:'text',
         success:function(){
-            Sexy.confirm("Your tenshi has been deleted!");
+            Sexy.confirm("Your tenshi has been deleted!", {onComplete:function(){location.reload();}});
         },
         error:function(){
             Sexy.error("Error");
