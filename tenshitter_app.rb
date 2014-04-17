@@ -27,9 +27,8 @@ class TenshitterApp < Nancy::Base
     render "views/tenshis.erb"
   end
 
-  get "/username" do
-    u = User.find(session["user_id"])
-    @tenshis = Tenshi.where(user_id: u, deleted_at: nil).order('created_at DESC').limit('30')
+  get "/:username" do
+    @tenshis = Tenshi.where(username: params["username"], deleted_at: nil).order('created_at DESC').limit('30')
     render "views/username.erb"
   end
 
@@ -128,13 +127,13 @@ class TenshitterApp < Nancy::Base
     end
   end
 
-  post "/username/:other_user_id/follow" do
+  post "/username/user/:user_id/follow" do
     u = User.find(session["user_id"])
-    u.follow(params["other_user_id"])
+    u.follow(params["user_id"])
   end
 
-  post "/username/:other_user_id/unfollow" do
+  post "/username/user/:user_id/unfollow" do
     u = User.find(session["user_id"])
-    u.unfollow(params["other_user_id"])
+    u.unfollow(params["user_id"])
   end
 end
