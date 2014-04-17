@@ -25,5 +25,4 @@ namespace :db do
   task :version => :environment do
     puts "Current version: #{ActiveRecord::Migrator.current_version}"
   end
-
 end

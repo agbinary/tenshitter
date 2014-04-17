@@ -9,7 +9,7 @@
   <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
   <script type="text/javascript" src="/js/sexyalertbox.v1.2.jquery.js"></script>
   <link rel="stylesheet" type="text/css" media="all" href="/css/sexyalertbox.css"/>
-  <script type="text/javascript" src="/js/funciones.js"></script>
+  <script type="text/javascript" src="/js/functions.js"></script>
   <script type="text/javascript" src="/js/bootstrap.min.js"></script>
   <style type="text/css">
 
@@ -31,51 +31,56 @@
   </style>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/tenshis">Tenshitter</a>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/tenshis">Tenshitter</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/username/edit">Settings</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="/username">My Account</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" onclick="sign_out();">Sign out</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container" id="contenedor">
+      <br />
+      <div class="col-md-8" >
+        <table class="table table-hover">
+          <% @tenshis.each do |tenshi| %>
+              <tr>
+                <td>
+                  <%= tenshi %><br /><br />
+                  <input type="button" class="btn btn-primary btn-xs" onclick="retenshee(<%= tenshi.id %>);" value="Retenshee" />
+                  <input type="button" class="btn btn-primary btn-xs" onclick="reply(<%= tenshi.id %>);" value="Reply" />
+                </td>
+              </tr>
+          <% end %>
+        </table>
+        <br /><br />
+      </div>
+      <div class="col-md-4" >
+        <h2 class = 'color_h4' ><%= @username %>'s profile</h2>
+        <% if @following %>
+            <input type="button" class="col-sm-2 btn btn-primary btn-sm" onclick="unfollow(<%= @u2 %>);" value="Unfollow" />
+        <% else %>
+            <input type="button" class="col-sm-2 btn btn-primary btn-sm" onclick="follow(<%= @u2 %>);" value="Follow" />
+        <% end %>
+      </div>
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/username/edit">Settings</a></li>
-      </ul>
-      <ul class="nav navbar-nav">
-        <li><a href="/username">My Account</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" onclick="sign_out();">Sign out</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<div class="container" id="contenedor">
-  <br />
-  <div class="col-md-8" >
-    <table class="table table-hover">
-      <% @tenshis.each do |tenshi| %>
-          <tr>
-            <td>
-              <%= tenshi %><br /><br />
-              <input type="button" class="btn btn-primary btn-xs" onclick="retenshee(<%= tenshi.id %>);" value="Retenshee" />
-              <input type="button" class="btn btn-primary btn-xs" onclick="reply(<%= tenshi.id %>);" value="Reply" />
-            </td>
-          </tr>
-      <% end %>
-    </table>
-    <br /><br />
-  </div>
-  <div class="col-md-4" >
-    <h2 class = 'color_h4' ><%= @username %>'s profile</h2>
-  </div>
-</div>
 </body>
 </html>

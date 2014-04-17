@@ -62,7 +62,6 @@ class TenshitterApp < Nancy::Base
       session["error_index_message"] = "The username/password combination is wrong"
       render "views/index.erb"
     end
-
   end
 
   post "/tenshis" do
@@ -111,15 +110,31 @@ class TenshitterApp < Nancy::Base
     response.redirect("/username")
   end
 
-  post "/username/search" do
-    if u2 = User.find_by(username: params["search"], deleted_at: nil)
-         u2 = u2.id
+  post "/username/user" do
+    if @u2 = User.find_by(username: params["search"], deleted_at: nil)
+         @u2 = @u2.id
+         u1 = User.find(session["user_id"])
          @username = params["search"]
-         @tenshis = Tenshi.where(user_id: u2, deleted_at: nil).order('created_at DESC').limit('30')
+         @tenshis = Tenshi.where(user_id: @u2, deleted_at: nil).order('created_at DESC').limit('30')
+         if Relationship.find_by(follower_id: u1, following_id: @u2)
+           @following = true
+         else
+           @following = false
+         end
          render "views/user.erb"
     else
          session["error_search_user"] = "No results for #{params["search"]}. Try again"
          response.redirect("/username")
     end
+  end
+
+  post "/username/:other_user_id/follow" do
+    u = User.find(session["user_id"])
+    u.follow(params["other_user_id"])
+  end
+
+  post "/username/:other_user_id/unfollow" do
+    u = User.find(session["user_id"])
+    u.unfollow(params["other_user_id"])
   end
 end

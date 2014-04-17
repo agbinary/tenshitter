@@ -100,3 +100,35 @@ function delete_user(user_id)
         }
     });
 }
+
+function follow(other_user_id)
+{   $.ajax({
+        type:"POST",
+        url: "/username/"+other_user_id+"/follow",
+        data:{other_user_id:other_user_id},
+
+        dataType:'text',
+        success:function(){
+            Sexy.confirm("Follow!");
+        },
+        error:function(){
+            Sexy.error("Error");
+        }
+    });
+}
+
+function unfollow(other_user_id)
+{   $.ajax({
+    type:"POST",
+    url: "/username/"+other_user_id+"/unfollow",
+    data:{other_user_id:other_user_id},
+
+    dataType:'text',
+    success:function(){
+        Sexy.confirm("Unfollow!");
+    },
+    error:function(){
+        Sexy.error("Error");
+    }
+});
+}
