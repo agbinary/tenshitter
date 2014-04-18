@@ -28,7 +28,8 @@ class TenshitterApp < Nancy::Base
   end
 
   get "/:username" do
-    @tenshis = Tenshi.where(username: params["username"], deleted_at: nil).order('created_at DESC').limit('30')
+    @username = User.find(session["user_id"])
+    @tenshis = Tenshi.where(user_id: @username, deleted_at: nil).order('created_at DESC').limit('30')
     render "views/username.erb"
   end
 
@@ -36,9 +37,28 @@ class TenshitterApp < Nancy::Base
     render "views/tenshis_news.erb"
   end
 
-  get "/username/edit" do
+  get "/settings/edit" do
     @u = User.find(session["user_id"])
     render "views/edit.erb"
+  end
+
+  get "/:user" do
+    if @u2 = User.find_by(username: params["user"], deleted_at: nil)
+      @u2 = @u2.id
+      u1 = User.find(session["user_id"])
+      @user = params["search"]
+      @username = u1.username
+      @tenshis = Tenshi.where(user_id: @u2, deleted_at: nil).order('created_at DESC').limit('30')
+      if Relationship.find_by(follower_id: u1, following_id: @u2)
+        @following = true
+      else
+        @following = false
+      end
+      render "views/user.erb"
+    else
+      session["error_search_user"] = "No results for #{params["search"]}. Try again"
+      response.redirect("/username")
+    end
   end
 
   post "/users" do
@@ -103,37 +123,19 @@ class TenshitterApp < Nancy::Base
     id.update(deleted_at: Date.today)
   end
 
-  post "/username/edit" do
+  post "/settings/edit" do
     u = User.find(session["user_id"])
     u.update(name: params["name_edit"], email: params["email_edit"], password: params["password_edit"], username: params["username_edit"])
-    response.redirect("/username")
+    response.redirect("/#{u.username}")
   end
 
-  post "/username/user" do
-    if @u2 = User.find_by(username: params["search"], deleted_at: nil)
-         @u2 = @u2.id
-         u1 = User.find(session["user_id"])
-         @username = params["search"]
-         @tenshis = Tenshi.where(user_id: @u2, deleted_at: nil).order('created_at DESC').limit('30')
-         if Relationship.find_by(follower_id: u1, following_id: @u2)
-           @following = true
-         else
-           @following = false
-         end
-         render "views/user.erb"
-    else
-         session["error_search_user"] = "No results for #{params["search"]}. Try again"
-         response.redirect("/username")
-    end
-  end
-
-  post "/username/user/:user_id/follow" do
+  post ":user/follow" do
     u = User.find(session["user_id"])
-    u.follow(params["user_id"])
+    u.follow(params["user"])
   end
 
-  post "/username/user/:user_id/unfollow" do
+  post "/:user/unfollow" do
     u = User.find(session["user_id"])
-    u.unfollow(params["user_id"])
+    u.unfollow(params["user"])
   end
 end

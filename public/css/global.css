@@ -1,4 +1,4 @@
-body {
+/*body {
 background:#F5F5E8  none repeat scroll 0 0;
 color:#333333;
 font-size:12px;
@@ -90,7 +90,7 @@ code {
 padding:1px 3px;
 }
 code, pre {
-background:#EEEEEE none repeat scroll 0 0;
+background:#0F6BBA none repeat scroll 0 0;
 color:#555555;
 }
 #top {
@@ -105,7 +105,7 @@ position:relative;
 width:788px;
 }
 .thumb img {
-background:#EEEEEE none repeat scroll 0 0;
+background:#0F6BBA none repeat scroll 0 0;
 border:1px solid #AAAAAA;
 padding:5px;
 }
@@ -249,7 +249,7 @@ position:relative;
 width:100%;
 }
 .download-widget td, .download-widget th {
-background:#EEEEEE none repeat scroll 0 0;
+background:#0F6BBA none repeat scroll 0 0;
 margin:1px;
 padding:5px;
 }
@@ -257,4 +257,64 @@ padding:5px;
 background:#E0E0E0 none repeat scroll 0 0;
 font-weight:bold;
 text-align:left;
+}
+*/
+.navbar-tenshitter {
+    background-color: #0F6BBA;
+    border-color: #0F6BBA;
+}
+.navbar-tenshitter .navbar-brand {
+    color: #ecf0f1;
+}
+.navbar-tenshitter .navbar-brand:hover, .navbar-tenshitter .navbar-brand:focus {
+    color: #0F6BBA;
+}
+.navbar-tenshitter .navbar-text {
+    color: #ecf0f1;
+}
+.navbar-tenshitter .navbar-nav > li > a {
+    color: #ecf0f1;
+}
+.navbar-tenshitter .navbar-nav > li > a:hover, .navbar-tenshitter .navbar-nav > li > a:focus {
+    color: #0F6BBA;
+}
+.navbar-tenshitter .navbar-nav > .active > a, .navbar-tenshitter .navbar-nav > .active > a:hover, .navbar-tenshitter .navbar-nav > .active > a:focus {
+    color: #0F6BBA;
+    background-color: #0F6BBA;
+}
+.navbar-tenshitter .navbar-nav > .open > a, .navbar-tenshitter .navbar-nav > .open > a:hover, .navbar-tenshitter .navbar-nav > .open > a:focus {
+    color: #0F6BBA;
+    background-color: #0F6BBA;
+}
+.navbar-tenshitter .navbar-toggle {
+    border-color: #0F6BBA;
+}
+.navbar-tenshitter .navbar-toggle:hover, .navbar-tenshitter .navbar-toggle:focus {
+    background-color: #0F6BBA;
+}
+.navbar-tenshitter .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+.navbar-tenshitter .navbar-collapse,
+.navbar-tenshitter .navbar-form {
+    border-color: #ecf0f1;
+}
+.navbar-tenshitter .navbar-link {
+    color: #ecf0f1;
+}
+.navbar-tenshitter .navbar-link:hover {
+    color: #0F6BBA;
+}
+
+@media (max-width: 767px) {
+    .navbar-tenshitter .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+    .navbar-tenshitter .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-tenshitter .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #0F6BBA;
+    }
+    .navbar-tenshitter .navbar-nav .open .dropdown-menu > .active > a, .navbar-tenshitter .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-tenshitter .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #0F6BBA;
+        background-color: #0F6BBA;
+    }
 }

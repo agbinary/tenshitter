@@ -29,9 +29,10 @@
           color:333;
       }
   </style>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/global.css"/>
 </head>
 <body>
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-tenshitter" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -46,7 +47,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="/username/edit">Settings</a></li>
+            <li><a href="/settings/edit">Settings</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" onclick="sign_out();">Sign out</a></li>
@@ -61,7 +62,6 @@
             <%= session.delete("error_search_user") %>
             <img src="/images/error.jpg">
         <% end %>
-        <br /><br />
         <table class="table table-hover">
             <% @tenshis.each do |tenshi| %>
                 <tr>
@@ -77,9 +77,9 @@
         <br /><br />
       </div>
       <div class="col-md-4" >
-        <form action="/username/user" method="post" role="form">
+        <form action="/user" method="post" role="form">
           <div class="form-group">
-            <input type="text" name="search" class="form-control col-sm-2" id="txtSearch" placeholder="Search for an user by username"/>
+            <input type="text" name="user" class="form-control col-sm-2" id="txtSearch" placeholder="Search for an user by username"/>
             <br /><br />
           </div>
           <button type="submit" name="search_user" class="col-sm-2 btn btn-primary btn-sm">Search</button>

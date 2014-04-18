@@ -101,21 +101,11 @@ function delete_user(user_id)
     });
 }
 
-function username(username)
-{   $.ajax({
-        type:"GET",
-        url: "/"+username,
-        data:{username:username},
-
-        dataType:'text'
-    });
-}
-
-function follow(user_id)
+function follow(user)
 {   $.ajax({
         type:"POST",
-        url: "/username/user/"+user_id+"/follow",
-        data:{user_id:user_id},
+        url: "/"+user+"/follow",
+        data:{user:user},
 
         dataType:'text',
         success:function(){
@@ -127,11 +117,11 @@ function follow(user_id)
     });
 }
 
-function unfollow(user_id)
+function unfollow(user)
 {   $.ajax({
     type:"POST",
-    url: "/username/user/"+user_id+"/unfollow",
-    data:{user_id:user_id},
+    url: "/"+user+"/unfollow",
+    data:{user:user},
 
     dataType:'text',
     success:function(){
