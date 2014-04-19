@@ -61,7 +61,7 @@
         <% if session["error_search_user"] %>
             <%= session.delete("error_search_user") %>
             <img src="/images/error.jpg">
-        <% end %>
+        <% end %><br /><br />
         <table class="table table-hover">
             <% @tenshis.each do |tenshi| %>
                 <tr>

@@ -28,9 +28,19 @@ class TenshitterApp < Nancy::Base
   end
 
   get "/:username" do
-    @username = User.find(session["user_id"])
-    @tenshis = Tenshi.where(user_id: @username, deleted_at: nil).order('created_at DESC').limit('30')
-    render "views/username.erb"
+    @current_user = User.find(session["user_id"])
+    @user = User.where(username: params["user"]).first
+    @tenshis = Tenshi.where(user_id: @user, deleted_at: nil).order('created_at DESC').limit('30')
+    if @current_user == @user
+      render "views/username.erb"
+    else
+      if Relationship.find_by(follower_id: @user, following_id: @u2)
+        @following = true
+      else
+        @following = false
+      end
+      render "views/user.erb"
+    end
   end
 
   get "/tenshis/news" do
@@ -40,25 +50,6 @@ class TenshitterApp < Nancy::Base
   get "/settings/edit" do
     @u = User.find(session["user_id"])
     render "views/edit.erb"
-  end
-
-  get "/:user" do
-    if @u2 = User.find_by(username: params["user"], deleted_at: nil)
-      @u2 = @u2.id
-      u1 = User.find(session["user_id"])
-      @user = params["search"]
-      @username = u1.username
-      @tenshis = Tenshi.where(user_id: @u2, deleted_at: nil).order('created_at DESC').limit('30')
-      if Relationship.find_by(follower_id: u1, following_id: @u2)
-        @following = true
-      else
-        @following = false
-      end
-      render "views/user.erb"
-    else
-      session["error_search_user"] = "No results for #{params["search"]}. Try again"
-      response.redirect("/username")
-    end
   end
 
   post "/users" do
@@ -127,6 +118,19 @@ class TenshitterApp < Nancy::Base
     u = User.find(session["user_id"])
     u.update(name: params["name_edit"], email: params["email_edit"], password: params["password_edit"], username: params["username_edit"])
     response.redirect("/#{u.username}")
+  end
+
+  post "/:user" do
+    if @u2 = User.find_by(username: params["user"], deleted_at: nil).first
+      u1 = User.find(session["user_id"])
+      @user = params["user"]
+      @username = u1.username
+      response.redirect("/#{params["user"]}")
+    else
+      u1 = User.find(session["user_id"])
+      session["error_search_user"] = "No results for #{params["user"]}. Try again"
+      response.redirect("/#{u1.username}")
+    end
   end
 
   post ":user/follow" do
