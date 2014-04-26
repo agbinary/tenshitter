@@ -76,9 +76,9 @@
       <div class="col-md-4" >
         <h2 class = 'color_h4' ><%= @user %>'s profile</h2>
         <% if @following %>
-            <input type="button" class="col-sm-2 btn btn-primary btn-sm" onclick="unfollow(<%= @u2 %>);" value="Unfollow" />
+            <input type="button" class="btn btn-primary" onclick="unfollow(<%= @u2.id %>);" value="Unfollow" />
         <% else %>
-            <input type="button" class="col-sm-2 btn btn-primary btn-sm" onclick="follow(<%= @u2 %>);" value="Follow" />
+            <input type="button" class="btn btn-primary" onclick="follow(<%= @u2.id %>);" value="Follow" />
         <% end %>
       </div>
     </div>

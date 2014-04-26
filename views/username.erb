@@ -61,7 +61,7 @@
         <% if session["error_search_user"] %>
             <%= session.delete("error_search_user") %>
             <img src="/images/error.jpg">
-        <% end %><br /><br />
+        <% end %>
         <table class="table table-hover">
             <% @tenshis.each do |tenshi| %>
                 <tr>
@@ -77,7 +77,7 @@
         <br /><br />
       </div>
       <div class="col-md-4" >
-        <form action="/user" method="post" role="form">
+        <form action="/search/user" method="post" role="form">
           <div class="form-group">
             <input type="text" name="user" class="form-control col-sm-2" id="txtSearch" placeholder="Search for an user by username"/>
             <br /><br />

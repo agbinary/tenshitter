@@ -101,11 +101,12 @@ function delete_user(user_id)
     });
 }
 
-function follow(user)
-{   $.ajax({
+function follow(user_id)
+{   Sexy.confirm("Follow! "+user_id);
+    $.ajax({
         type:"POST",
-        url: "/"+user+"/follow",
-        data:{user:user},
+        url: "/"+user_id+"/follow",
+        data:{user_id:user_id},
 
         dataType:'text',
         success:function(){
@@ -117,11 +118,11 @@ function follow(user)
     });
 }
 
-function unfollow(user)
+function unfollow(user_id)
 {   $.ajax({
     type:"POST",
-    url: "/"+user+"/unfollow",
-    data:{user:user},
+    url: "/"+user_id+"/unfollow",
+    data:{user_id:user_id},
 
     dataType:'text',
     success:function(){
