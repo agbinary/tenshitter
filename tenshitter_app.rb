@@ -74,12 +74,14 @@ class TenshitterApp < Nancy::Base
 
   post "/:user_id/follow" do
     u = User.find(session["user_id"])
-    u.follow(params["user_id"])
+    u2 = User.find(params["user_id"])
+    u.follow(u2)
   end
 
   post "/:user_id/unfollow" do
     u = User.find(session["user_id"])
-    u.unfollow(params["user_id"])
+    u2 = User.find(params["user_id"])
+    u.unfollow(u2)
   end
 
   post "/users" do

@@ -102,8 +102,7 @@ function delete_user(user_id)
 }
 
 function follow(user_id)
-{   Sexy.confirm("Follow! "+user_id);
-    $.ajax({
+{   $.ajax({
         type:"POST",
         url: "/"+user_id+"/follow",
         data:{user_id:user_id},
@@ -120,16 +119,16 @@ function follow(user_id)
 
 function unfollow(user_id)
 {   $.ajax({
-    type:"POST",
-    url: "/"+user_id+"/unfollow",
-    data:{user_id:user_id},
+        type:"POST",
+        url: "/"+user_id+"/unfollow",
+        data:{user_id:user_id},
 
-    dataType:'text',
-    success:function(){
-        Sexy.confirm("Unfollow!");
-    },
-    error:function(){
-        Sexy.error("Error");
-    }
-});
+        dataType:'text',
+        success:function(){
+            Sexy.confirm("Unfollow!");
+        },
+        error:function(){
+            Sexy.error("Error");
+        }
+    });
 }
