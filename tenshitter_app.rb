@@ -97,7 +97,7 @@ class TenshitterApp < Nancy::Base
     end
   end
 
-  post "/login" do
+  post "/signin" do
     if user = User.find_by(username: params["username"], password: params["password"], deleted_at: nil)
         session["user_id"] = user.id
         response.redirect("/tenshis")

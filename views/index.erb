@@ -34,7 +34,7 @@
         <br />
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-                <form action="/login" method="post" role="form">
+                <form action="/signin" method="post" role="form">
                   <% if session["error_index_message"] %>
                       <%= session.delete("error_index_message") %>
                       <img src="/images/error.jpg">
