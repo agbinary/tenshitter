@@ -28,9 +28,21 @@ class TenshitterApp < Nancy::Base
   end
 
   get "/:username" do
-    @username = User.find(session["user_id"])
-    @tenshis = Tenshi.where(user_id: @username, deleted_at: nil).order('created_at DESC').limit('30')
-    render "views/username.erb"
+    @current_user = User.find(session["user_id"])
+    @search_user = User.find(session["search_user"])
+    if @current_user.username == @search_user.username
+      @tenshis = Tenshi.where(user_id: @current_user, deleted_at: nil).order('created_at DESC').limit('30')
+      render "views/username.erb"
+    else
+      session["search_user"] = @current_user.id
+      @tenshis = Tenshi.where(user_id: @search_user, deleted_at: nil).order('created_at DESC').limit('30')
+      if Relationship.find_by(follower_id: @current_user, following_id: @search_user)
+        @following = true
+      else
+        @following = false
+      end
+      render "views/user.erb"
+    end
   end
 
   get "/tenshis/news" do
@@ -42,26 +54,12 @@ class TenshitterApp < Nancy::Base
     render "views/edit.erb"
   end
 
-  get "/search/user" do
-    u1 = User.find(session["user_id"])
-    @u2 = User.find(session[:search_user])
-    @user = @u2.username
-    @username = u1.username
-    @tenshis = Tenshi.where(user_id: @u2, deleted_at: nil).order('created_at DESC').limit('30')
-    if Relationship.find_by(follower_id: u1, following_id: @u2)
-      @following = true
-    else
-      @following = false
-    end
-    render "views/user.erb"
-  end
-
   post "/search/user" do
     if @u2 = User.find_by(username: params["user"], deleted_at: nil)
-      session[:search_user] = @u2.id
+      session["search_user"] = @u2.id
       u1 = User.find(session["user_id"])
       if params["user"] != u1.username
-        response.redirect("/search/user")
+        response.redirect("/#{params["user"]}")
       else
         response.redirect("/#{u1.username}")
       end
@@ -100,6 +98,7 @@ class TenshitterApp < Nancy::Base
   post "/signin" do
     if user = User.find_by(username: params["username"], password: params["password"], deleted_at: nil)
         session["user_id"] = user.id
+        session["search_user"] = user.id
         response.redirect("/tenshis")
     else
       session["error_index_message"] = "The username/password combination is wrong"

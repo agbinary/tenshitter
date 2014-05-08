@@ -50,7 +50,7 @@
             <li><a href="/settings/edit">Settings</a></li>
           </ul>
           <ul class="nav navbar-nav">
-            <li><a href="/<%= @username %>">My Account</a></li>
+            <li><a href="/<%= @current_user.username %>">My Account</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" onclick="sign_out();">Sign out</a></li>
@@ -74,11 +74,11 @@
         </table>
       </div>
       <div class="col-md-4" >
-        <h2 class = 'color_h4' ><%= @user %>'s profile</h2>
+        <h2 class = 'color_h4' ><%= @search_user.username %>'s profile</h2>
         <% if @following %>
-            <input type="button" class="btn btn-primary" onclick="unfollow(<%= @u2.id %>);" value="Unfollow" />
+            <input type="button" class="btn btn-primary" onclick="unfollow(<%= @search_user.id %>);" value="Unfollow" />
         <% else %>
-            <input type="button" class="btn btn-primary" onclick="follow(<%= @u2.id %>);" value="Follow" />
+            <input type="button" class="btn btn-primary" onclick="follow(<%= @search_user.id %>);" value="Follow" />
         <% end %>
       </div>
     </div>
