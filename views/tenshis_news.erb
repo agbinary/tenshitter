@@ -3,8 +3,8 @@
         <tr class="trtenshi">
           <td>
             <%= tenshi %><br /><br />
-            <input type="button" class="btn btn-primary btn-xs" onclick="retenshee(<%= tenshi.id %>);" value="Retenshee" />
-            <input type="button" class="btn btn-primary btn-xs" onclick="reply(<%= tenshi.id %>);" value="Reply" />
+                <button type="button" class="btn btn-default btn-xs" onclick="retenshee(<%= tenshi.id %>);" ><span class="glyphicon glyphicon-refresh"></span> Retenshee </button>
+                <button type="button" class="btn btn-default btn-xs" onclick="reply(<%= tenshi.id %>);" ><span class="glyphicon glyphicon-share-alt"></span> Reply </button>
           </td>
         </tr>
     <% end %>

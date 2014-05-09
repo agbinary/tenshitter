@@ -1,5 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Welcome a Tenshitter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,8 +66,8 @@
               <tr>
                 <td>
                   <%= tenshi %><br /><br />
-                  <input type="button" class="btn btn-primary btn-xs" onclick="retenshee(<%= tenshi.id %>);" value="Retenshee" />
-                  <input type="button" class="btn btn-primary btn-xs" onclick="reply(<%= tenshi.id %>);" value="Reply" />
+                  <button type="button" class="btn btn-default btn-xs" onclick="retenshee(<%= tenshi.id %>);" ><span class="glyphicon glyphicon-refresh"></span> Retenshee </button>
+                  <button type="button" class="btn btn-default btn-xs" onclick="reply(<%= tenshi.id %>);"  ><span class="glyphicon glyphicon-share-alt"></span> Reply </button>
                 </td>
               </tr>
           <% end %>
@@ -76,9 +76,9 @@
       <div class="col-md-4" >
         <h2 class = 'color_h4' ><%= @search_user.username %>'s profile</h2>
         <% if @following %>
-            <input type="button" class="btn btn-primary" onclick="unfollow(<%= @search_user.id %>);" value="Unfollow" />
+            <input type="button" class="btn btn-info" onclick="unfollow(<%= @search_user.id %>);" value="Unfollow" />
         <% else %>
-            <input type="button" class="btn btn-primary" onclick="follow(<%= @search_user.id %>);" value="Follow" />
+            <input type="button" class="btn btn-info" onclick="follow(<%= @search_user.id %>);" value="Follow" />
         <% end %>
       </div>
     </div>
