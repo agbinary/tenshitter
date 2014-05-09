@@ -14,7 +14,7 @@
   <style type="text/css">
 
       html {
-          background: url(/images/background.jpg) no-repeat center center fixed;
+          background: url(/images/back_ground.jpg) no-repeat center center fixed;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
@@ -61,7 +61,7 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="container" id="contenedor">
+    <div class="container-fluid" id="contenedor">
       <br />
       <div class="col-md-8" >
         <% if session["error_search_user"] %>
@@ -82,8 +82,8 @@
          </table>
         <br /><br />
       </div>
-      <div class="col-md-4" >
-
+      <div class="well col-md-4" >
+        <h2 class = 'color_h4' ><%= @current_user.name %><br />@<%= @current_user.username %></h2>
       </div>
     </div>
 </body>

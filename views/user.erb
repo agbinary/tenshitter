@@ -14,7 +14,7 @@
   <style type="text/css">
 
       html {
-          background: url(/images/background.jpg) no-repeat center center fixed;
+          background: url(/images/back_ground.jpg) no-repeat center center fixed;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
@@ -58,7 +58,7 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="container" id="contenedor">
+    <div class="container-fluid" id="contenedor">
       <br />
       <div class="col-md-8" >
         <table class="table table-hover">
@@ -73,8 +73,8 @@
           <% end %>
         </table>
       </div>
-      <div class="col-md-4" >
-        <h2 class = 'color_h4' ><%= @search_user.username %>'s profile</h2>
+      <div class="well col-md-4" >
+        <h2 class = 'color_h4' ><%= @search_user.name %><br />@<%= @search_user.username %></h2>
         <% if @following %>
             <input type="button" class="btn btn-info" onclick="unfollow(<%= @search_user.id %>);" value="Unfollow" />
         <% else %>
