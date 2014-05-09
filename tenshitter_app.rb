@@ -83,15 +83,20 @@ class TenshitterApp < Nancy::Base
   end
 
   post "/users" do
-    user = User.create(name: params["name"], email: params["email"], password: params["password"], username: params["username"])
-    begin
-      User.find(user.id)
-    rescue ActiveRecord::RecordNotFound
-      session["error_form_message"] = "Missing or invalid data, please check the errors and try again"
-      render "views/form.erb"
+    if params["password"] == params["confirmpassword"] && params["password"] != nil
+      user = User.create(name: params["name"], email: params["email"], password: params["password"], username: params["username"])
+      begin
+        User.find(user.id)
+      rescue ActiveRecord::RecordNotFound
+        @error_form = true
+        render "views/form.erb"
+      else
+        Relationship.create(follower: user, following: user)
+        render "views/index.erb"
+      end
     else
-      Relationship.create(follower: user, following: user)
-      render "views/index.erb"
+      @error_password = true
+      render "views/form.erb"
     end
   end
 
@@ -101,7 +106,7 @@ class TenshitterApp < Nancy::Base
         session["search_user"] = user.id
         response.redirect("/tenshis")
     else
-      session["error_index_message"] = "The username/password combination is wrong"
+      @error_index = true
       render "views/index.erb"
     end
   end

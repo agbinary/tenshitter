@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <style type="text/css">
         html {
             background: url(/images/background.jpg) no-repeat center center fixed;
@@ -40,6 +43,12 @@
       </div><!-- /.container-fluid -->
     </nav>
     <div class="container" id="contenedor">
+        <% if @error_index %>
+          <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            The username/password combination is wrong
+          </div>
+        <% end %>
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center"><h1 class = "color_h4">Welcome to Tenshitter<br />
                 <small>Microblogging network</small>
@@ -50,9 +59,6 @@
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <form action="/signin" method="post" role="form">
-                  <% if session["error_index_message"] %>
-                      <%= session.delete("error_index_message") %>
-                  <% end %>
                   <br /><br />
                     <div class="form-group">
                         <input type="text" class="form-control" id="txtUsername" placeholder="Username" name="username"/>
