@@ -6,16 +6,13 @@ function retenshee(tenshi_id)
 
         dataType:'text',
         success:function(){
-            Sexy.confirm("Your retenshee has been sent!");
-        },
-        error:function(){
-            Sexy.error("Error");
+            bootbox.alert("Your retenshee has been sent!");
         }
     });
 }
 
 function reply(reply_id)
-{   Sexy.prompt("Reply:", "Reply",
+{   bootbox.prompt("Reply:", "Reply",
     { onComplete:
         function(message)
         {   if (message)
@@ -26,10 +23,7 @@ function reply(reply_id)
 
                     dataType:'text',
                     success:function(){
-                        Sexy.confirm("Your tenshi has been sent!");
-                    },
-                    error:function(){
-                        Sexy.error("Error");
+                        bootbox.alert("Your tenshi has been sent!");
                     }
                 });
             }
@@ -45,10 +39,7 @@ function delete_tenshi(delete_id)
 
         dataType:'text',
         success:function(){
-            Sexy.confirm("Your tenshi has been deleted!", {onComplete:function(){location.reload();}});
-        },
-        error:function(){
-            Sexy.error("Error");
+            bootbox.alert("Your tenshi has been deleted!", {onComplete:function(){location.reload();}});
         }
     });
 }
@@ -60,10 +51,7 @@ function sign_out()
 
         dataType:'text',
         success:function(){
-            Sexy.alert("Your sesion has been closed", {onComplete:function(){location.href="/";}});
-        },
-        error:function(){
-            Sexy.error("Error");
+            bootbox.alert("Your sesion has been closed", {onComplete:function(){location.href="/";}});
         }
     });
 }
@@ -93,10 +81,7 @@ function delete_user(user_id)
 
         dataType:'text',
         success:function(){
-            Sexy.confirm("Your account has been deleted!", {onComplete:function(){location.href="/";}});
-        },
-        error:function(){
-            Sexy.error("Error");
+            bootbox.alert("Your account has been deleted!", {onComplete:function(){location.href="/";}});
         }
     });
 }
@@ -109,10 +94,7 @@ function follow(user_id)
 
         dataType:'text',
         success:function(){
-            Sexy.confirm("Follow!");
-        },
-        error:function(){
-            Sexy.error("Error");
+            bootbox.alert("Follow!");
         }
     });
 }
@@ -125,10 +107,7 @@ function unfollow(user_id)
 
         dataType:'text',
         success:function(){
-            Sexy.confirm("Unfollow!");
-        },
-        error:function(){
-            Sexy.error("Error");
+            bootbox.alert("Unfollow!");
         }
     });
 }
