@@ -4,8 +4,8 @@
             <tr class="trtenshi">
               <td>
                 <%= tenshi %><br /><br />
-                    <button type="button" class="btn btn-default btn-xs" onclick="retenshee(<%= tenshi.id %>);" ><span class="glyphicon glyphicon-refresh"></span> Retenshee </button>
-                    <button type="button" class="btn btn-default btn-xs" onclick="reply(<%= tenshi.id %>);" ><span class="glyphicon glyphicon-share-alt"></span> Reply </button>
+                    <span class="glyphicon glyphicon-refresh" onclick="retenshee(<%= tenshi.id %>);">   </span>
+                    <span class="glyphicon glyphicon-share-alt" onclick="reply(<%= tenshi.id %>);">   </span>
               </td>
             </tr>
         <% end %>

@@ -12,11 +12,10 @@ function retenshee(tenshi_id)
 }
 
 function reply(reply_id)
-{   bootbox.prompt("Reply:", "Reply",
-    { onComplete:
-        function(message)
-        {   if (message)
-            {   $.ajax({
+{   bootbox.prompt("Reply:",
+    function(message)
+    {   if (message != null)
+        {   $.ajax({
                 type:"POST",
                 url: "/tenshis/"+reply_id+"/reply",
                 data:{message:message, reply_id:reply_id},
@@ -26,7 +25,6 @@ function reply(reply_id)
                     bootbox.alert("Your tenshi has been sent!");
                 }
             });
-        }
         }
     });
 }
@@ -39,7 +37,7 @@ function delete_tenshi(delete_id)
 
         dataType:'text',
         success:function(){
-            bootbox.alert("Your tenshi has been deleted!", {onComplete:function(){location.reload();}});
+            bootbox.alert("Your tenshi has been deleted!", function(){location.reload();});
         }
     });
 }
@@ -51,7 +49,7 @@ function sign_out()
 
         dataType:'text',
         success:function(){
-            bootbox.alert("Your sesion has been closed", {onComplete:function(){location.href="/";}});
+            bootbox.alert("Your sesion has been closed", function(){location.href="/";});
         }
     });
 }
@@ -81,7 +79,7 @@ function delete_user(user_id)
 
         dataType:'text',
         success:function(){
-            bootbox.alert("Your account has been deleted!", {onComplete:function(){location.href="/";}});
+            bootbox.alert("Your account has been deleted!", function(){location.href="/";});
         }
     });
 }
@@ -94,7 +92,7 @@ function follow(user_id)
 
         dataType:'text',
         success:function(){
-            bootbox.alert("Follow!", {onComplete:function(){location.reload();}});
+            bootbox.alert("Follow!", function(){location.reload();});
         }
     });
 }
@@ -107,7 +105,7 @@ function unfollow(user_id)
 
         dataType:'text',
         success:function(){
-            bootbox.alert("Unfollow!", {onComplete:function(){location.reload();}});
+            bootbox.alert("Unfollow!", function(){location.reload();});
         }
     });
 }
