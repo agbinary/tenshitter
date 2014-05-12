@@ -1,12 +1,14 @@
-<table id = "tabla_tenshis" class="table table-hover">
-    <% @tenshis_news.each do |tenshi| %>
-        <tr class="trtenshi">
-          <td>
-            <%= tenshi %><br /><br />
-                <button type="button" class="btn btn-default btn-xs" onclick="retenshee(<%= tenshi.id %>);" ><span class="glyphicon glyphicon-refresh"></span> Retenshee </button>
-                <button type="button" class="btn btn-default btn-xs" onclick="reply(<%= tenshi.id %>);" ><span class="glyphicon glyphicon-share-alt"></span> Reply </button>
-          </td>
-        </tr>
-    <% end %>
-    <% session["last_tenshi_id"] = @tenshis_news.first.id %>
-</table>
+<div class="container-fluid" id="contenedor">
+    <table id = "tabla_tenshis" class="table table-hover">
+        <% @tenshis_news.each do |tenshi| %>
+            <tr class="trtenshi">
+              <td>
+                <%= tenshi %><br /><br />
+                    <button type="button" class="btn btn-default btn-xs" onclick="retenshee(<%= tenshi.id %>);" ><span class="glyphicon glyphicon-refresh"></span> Retenshee </button>
+                    <button type="button" class="btn btn-default btn-xs" onclick="reply(<%= tenshi.id %>);" ><span class="glyphicon glyphicon-share-alt"></span> Reply </button>
+              </td>
+            </tr>
+        <% end %>
+        <% session["last_tenshi_id"] = @tenshis_news.first.id %>
+    </table>
+</div>

@@ -17,16 +17,16 @@ function reply(reply_id)
         function(message)
         {   if (message)
             {   $.ajax({
-                    type:"POST",
-                    url: "/tenshis/"+reply_id+"/reply",
-                    data:{message:message, reply_id:reply_id},
+                type:"POST",
+                url: "/tenshis/"+reply_id+"/reply",
+                data:{message:message, reply_id:reply_id},
 
-                    dataType:'text',
-                    success:function(){
-                        bootbox.alert("Your tenshi has been sent!");
-                    }
-                });
-            }
+                dataType:'text',
+                success:function(){
+                    bootbox.alert("Your tenshi has been sent!");
+                }
+            });
+        }
         }
     });
 }
@@ -94,7 +94,7 @@ function follow(user_id)
 
         dataType:'text',
         success:function(){
-            bootbox.alert("Follow!");
+            bootbox.alert("Follow!", {onComplete:function(){location.reload();}});
         }
     });
 }
@@ -107,7 +107,7 @@ function unfollow(user_id)
 
         dataType:'text',
         success:function(){
-            bootbox.alert("Unfollow!");
+            bootbox.alert("Unfollow!", {onComplete:function(){location.reload();}});
         }
     });
 }
