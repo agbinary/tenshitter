@@ -8,6 +8,7 @@ gem 'sqlite3'
 
 gem 'nancy', github: 'guilleiguaran/nancy'
 gem 'tilt'
+gem 'bcrypt'
 
 gem "minitest", :group => :test
 gem "mocha", :group => :test

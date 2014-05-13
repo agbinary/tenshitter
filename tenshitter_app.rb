@@ -1,5 +1,6 @@
 require 'nancy'
 require 'nancy/render'
+require 'bcrypt'
 require './environment'
 require './env'
 require_relative 'models/user'
@@ -23,7 +24,7 @@ class TenshitterApp < Nancy::Base
     @username = u.username
     followings = u.followings
     @tenshis = Tenshi.where(user_id: followings, deleted_at: nil).order('created_at DESC').limit('30')
-    session["last_tenshi_id"] = @tenshis.first.id if u.tenshis.count != 0
+    session["last_tenshi_id"] = @tenshis.first.id if @tenshis.count != 0
     render "views/tenshis.erb"
   end
 
@@ -84,7 +85,7 @@ class TenshitterApp < Nancy::Base
 
   post "/users" do
     if params["password"] == params["confirmpassword"] && params["password"] != nil
-      user = User.create(name: params["name"], email: params["email"], password: params["password"], username: params["username"])
+      user = User.create(name: params["name"], email: params["email"], password: BCrypt::Password.create(params["password"]), username: params["username"])
       begin
         User.find(user.id)
       rescue ActiveRecord::RecordNotFound
