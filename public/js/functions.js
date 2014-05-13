@@ -92,7 +92,7 @@ function follow(user_id)
 
         dataType:'text',
         success:function(){
-            bootbox.alert("Follow!", function(){location.reload();});
+            bootbox.alert("Follow!");
         }
     });
 }
@@ -105,7 +105,7 @@ function unfollow(user_id)
 
         dataType:'text',
         success:function(){
-            bootbox.alert("Unfollow!", function(){location.reload();});
+            bootbox.alert("Unfollow!");
         }
     });
 }

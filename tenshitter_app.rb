@@ -1,6 +1,5 @@
 require 'nancy'
 require 'nancy/render'
-require 'bcrypt'
 require './environment'
 require './env'
 require_relative 'models/user'
@@ -55,37 +54,9 @@ class TenshitterApp < Nancy::Base
     render "views/edit.erb"
   end
 
-  post "/search/user" do
-    if @u2 = User.find_by(username: params["user"], deleted_at: nil)
-      session["search_user"] = @u2.id
-      u1 = User.find(session["user_id"])
-      if params["user"] != u1.username
-        response.redirect("/#{params["user"]}")
-      else
-        response.redirect("/#{u1.username}")
-      end
-    else
-      u1 = User.find(session["user_id"])
-      session["error_search_user"] = "No results for #{params["user"]}. Try again"
-      response.redirect("/#{u1.username}")
-    end
-  end
-
-  post "/:user_id/follow" do
-    u = User.find(session["user_id"])
-    u2 = User.find(params["user_id"])
-    u.follow(u2)
-  end
-
-  post "/:user_id/unfollow" do
-    u = User.find(session["user_id"])
-    u2 = User.find(params["user_id"])
-    u.unfollow(u2)
-  end
-
   post "/users" do
     if params["password"] == params["confirmpassword"] && params["password"] != nil
-      user = User.create(name: params["name"], email: params["email"], password: BCrypt::Password.create(params["password"]), username: params["username"])
+      user = User.create(name: params["name"], email: params["email"], password: params["password"], username: params["username"])
       begin
         User.find(user.id)
       rescue ActiveRecord::RecordNotFound
@@ -102,10 +73,12 @@ class TenshitterApp < Nancy::Base
   end
 
   post "/signin" do
-    if user = User.find_by(username: params["username"], password: params["password"], deleted_at: nil)
+    if user = User.find_by(username: params["username"], deleted_at: nil)
+      if user.authenticate(params["password"])
         session["user_id"] = user.id
         session["search_user"] = user.id
         response.redirect("/tenshis")
+      end
     else
       @error_index = true
       render "views/index.erb"
@@ -156,5 +129,33 @@ class TenshitterApp < Nancy::Base
     u = User.find(session["user_id"])
     u.update(name: params["name_edit"], email: params["email_edit"], password: params["password_edit"], username: params["username_edit"])
     response.redirect("/#{u.username}")
+  end
+
+  post "/search/user" do
+    if @u2 = User.find_by(username: params["user"], deleted_at: nil)
+      session["search_user"] = @u2.id
+      u1 = User.find(session["user_id"])
+      if params["user"] != u1.username
+        response.redirect("/#{params["user"]}")
+      else
+        response.redirect("/#{u1.username}")
+      end
+    else
+      u1 = User.find(session["user_id"])
+      session["error_search_user"] = "No results for #{params["user"]}. Try again"
+      response.redirect("/#{u1.username}")
+    end
+  end
+
+  post "/:user_id/follow" do
+    u = User.find(session["user_id"])
+    u2 = User.find(params["user_id"])
+    u.follow(u2)
+  end
+
+  post "/:user_id/unfollow" do
+    u = User.find(session["user_id"])
+    u2 = User.find(params["user_id"])
+    u.unfollow(u2)
   end
 end
