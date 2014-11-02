@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container-fluid" id="contenedor">
     <table id = "tabla_tenshis" class="table table-hover">
         <% @tenshis_news.each do |tenshi| %>
@@ -11,4 +12,19 @@
         <% end %>
         <% session["last_tenshi_id"] = @tenshis_news.first.id %>
     </table>
+=======
+<div class="container-fluid" id="contenedor">
+    <table id = "tabla_tenshis" class="table table-hover">
+        <% @tenshis_news.each do |tenshi| %>
+            <tr class="trtenshi">
+              <td>
+                <%= tenshi %><br /><br />
+                    <span class="glyphicon glyphicon-refresh" onclick="retenshee(<%= tenshi.id %>);">   </span>
+                    <span class="glyphicon glyphicon-share-alt" onclick="reply(<%= tenshi.id %>);">   </span>
+              </td>
+            </tr>
+        <% end %>
+        <% session["last_tenshi_id"] = @tenshis_news.first.id %>
+    </table>
+>>>>>>> c18d6aa0316fffec063e8484590e00b96fcb5f75
 </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,4 +97,104 @@
         </div>
     </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        html {
+            background: url(/images/back_ground.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        body{
+            background-color: transparent;
+
+            color:black;
+        }
+        h1 small{
+            color:333;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/global.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-tenshitter" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Tenshitter</a>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="well" id="contenedor">
+        <% if @error_form %>
+          <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Missing or invalid data, please check the errors and try again
+          </div>
+        <% end %>
+        <% if @error_password %>
+          <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Password and their confirmation do not match
+          </div>
+        <% end %>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center"><h1 class = "color_h4">Welcome to Tenshitter<br />
+                <small>Microblogging network</small>
+            </h1>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <form action="/users" method="post" role="form">
+                  <br /><br />
+                  <div class="form-group">
+                      <label for="txtName">Name</label>
+                      <input type="text" class="form-control" id="txtName" placeholder="Full name" name="name"/>
+                  </div>
+                  <div class="form-group">
+                      <label for="txtEmail">E-mail</label>
+                      <input type="text" class="form-control" id="txtEmail" placeholder="Enter email" name="email"/>
+                  </div>
+                  <div class="form-group">
+                      <label for="txtPassword">Password</label>
+                      <input type="password" class="form-control" id="txtPassword" placeholder="Password" name="password"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="txtConfirmPassword">Confirm password</label>
+                    <input type="password" class="form-control" id="txtConfirmPassword" placeholder="Confirm password" name="confirmpassword"/>
+                  </div>
+                  <label for="txtUsername">Username</label>
+                  <div class="input-group">
+                      <span class="input-group-addon">@</span>
+                      <input type="text" class="form-control" id="txtUsername" placeholder="Username" name="username"/>
+                  </div>
+                  <br />
+                  <button type="submit" name="users" class="btn btn-info">Sign up for Tenshitter</button>
+                  <br /><br /><br />
+                  Do you have an account? <a href="/"> Sign In </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+>>>>>>> c18d6aa0316fffec063e8484590e00b96fcb5f75
 </html>

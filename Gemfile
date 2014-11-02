@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 source 'https://rubygems.org'
 
 gem 'rake'
@@ -20,3 +21,19 @@ gem 'bcrypt'
 
 gem "minitest", :group => :test
 gem "mocha", :group => :test
+=======
+source 'https://rubygems.org'
+
+gem 'rake'
+
+gem 'activerecord'
+gem 'mysql2'
+gem 'sqlite3'
+
+gem 'nancy', github: 'guilleiguaran/nancy'
+gem 'tilt'
+gem 'bcrypt'
+
+gem "minitest", :group => :test
+gem "mocha", :group => :test
+>>>>>>> c18d6aa0316fffec063e8484590e00b96fcb5f75
