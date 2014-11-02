@@ -3,8 +3,16 @@ source 'https://rubygems.org'
 gem 'rake'
 
 gem 'activerecord'
-gem 'mysql2'
-gem 'sqlite3', :group => :development
+
+group :development do
+  gem 'mysql2'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
 
 gem 'nancy', github: 'guilleiguaran/nancy'
 gem 'tilt'
