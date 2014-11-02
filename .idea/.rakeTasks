@@ -4,4 +4,4 @@ You are allowed to:
 1. Remove rake task
 2. Add existing rake tasks
 To add existing rake tasks automatically delete this file and reload the project.
---><RakeGroup description="" fullCmd="" taksId="rake"><RakeGroup description="" fullCmd="" taksId="db"><RakeTask description="Migrate the database" fullCmd="db:migrate" taksId="migrate" /><RakeTask description="Rolls the schema back to the previous version" fullCmd="db:rollback" taksId="rollback" /><RakeTask description="Retrieves the current schema version number" fullCmd="db:version" taksId="version" /><RakeTask description="" fullCmd="db:environment" taksId="environment" /></RakeGroup></RakeGroup></Settings>
+--><RakeGroup description="" fullCmd="" taksId="rake" /></Settings>
