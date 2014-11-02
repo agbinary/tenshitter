@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/test/models/user_test.rb" description="class UserTest &lt; MiniTest::Unit::TestCase&#10;  def te..." line="6" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="547ab2a8-286e-4148-848b-b8596364e7c0" name="Default" comment="" />
+    <ignored path="tenshitter.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="false" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/tenshitter@tenshitter_app.coverage" NAME="tenshitter_app Coverage Results" MODIFIED="1396589013325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@user.coverage" NAME="user Coverage Results" MODIFIED="1396278033268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@test_retenshee__tenshitter.coverage" NAME="test_retenshee: tenshitter Coverage Results" MODIFIED="1396461034293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@test_sign_up__tenshitter.coverage" NAME="test_sign_up: tenshitter Coverage Results" MODIFIED="1396288404531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@test_unfollow__tenshitter.coverage" NAME="test_unfollow: tenshitter Coverage Results" MODIFIED="1396461185758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@test_follow__tenshitter.coverage" NAME="test_follow: tenshitter Coverage Results" MODIFIED="1397010284554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@test_tenshee__tenshitter.coverage" NAME="test_tenshee: tenshitter Coverage Results" MODIFIED="1396460984612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@Rakefile.coverage" NAME="Rakefile Coverage Results" MODIFIED="1396074129191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@test_tenshi__tenshitter.coverage" NAME="test_tenshi: tenshitter Coverage Results" MODIFIED="1396288344016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@All_tests_in_db__tenshitter.coverage" NAME="All tests in db: tenshitter Coverage Results" MODIFIED="1396288429747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@test_reply__tenshitter.coverage" NAME="test_reply: tenshitter Coverage Results" MODIFIED="1396461128423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@test_helper.coverage" NAME="test_helper Coverage Results" MODIFIED="1396299239307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@Run_test__UserTest___tenshitter.coverage" NAME="Run test 'UserTest': tenshitter Coverage Results" MODIFIED="1396402058606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@Run_test__UserTest___tenshitter__1_.coverage" NAME="Run test 'UserTest': tenshitter (1) Coverage Results" MODIFIED="1396288336672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tenshittergithub/test/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@test_retenshi__tenshitter.coverage" NAME="test_retenshi: tenshitter Coverage Results" MODIFIED="1396411670539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/models" MODULE_NAME="tenshitter" />
+    <SUITE FILE_PATH="coverage/tenshitter@test_following__tenshitter.coverage" NAME="test_following: tenshitter Coverage Results" MODIFIED="1396405246674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/models" MODULE_NAME="tenshitter" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="tenshitter" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Rails/blog" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/test/models/user_test" />
+        <option value="$PROJECT_DIR$/models/relationship.rb" />
+        <option value="$PROJECT_DIR$/test/models/test_helper.rb" />
+        <option value="$PROJECT_DIR$/environment.rb" />
+        <option value="$PROJECT_DIR$/lib/tenshitter_app.rb" />
+        <option value="$PROJECT_DIR$/views/error.html" />
+        <option value="$USER_HOME$/Rails/blog/app/models/comment.rb" />
+        <option value="$PROJECT_DIR$/public/form.html" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/index_error.html" />
+        <option value="$PROJECT_DIR$/public/timeline.erb" />
+        <option value="$PROJECT_DIR$/public/timeline.html" />
+        <option value="$PROJECT_DIR$/views/timeline.html" />
+        <option value="$PROJECT_DIR$/views/form.html" />
+        <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/views/form_error.html" />
+        <option value="$PROJECT_DIR$/views/index_error.html" />
+        <option value="$PROJECT_DIR$/env.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config.ru" />
+        <option value="$PROJECT_DIR$/models/user.rb" />
+        <option value="$PROJECT_DIR$/test/models/user_test.rb" />
+        <option value="$PROJECT_DIR$/test/env.rb" />
+        <option value="$PROJECT_DIR$/public/js/jquery.js" />
+        <option value="$PROJECT_DIR$/public/js/tenshitter_app.rb" />
+        <option value="$PROJECT_DIR$/models/x.rb" />
+        <option value="$PROJECT_DIR$/views/timeline_replay.erb" />
+        <option value="$PROJECT_DIR$/views/timeline.erb" />
+        <option value="$PROJECT_DIR$/public/css/bootstrap-theme.css" />
+        <option value="$PROJECT_DIR$/models/tenshi.rb" />
+        <option value="$PROJECT_DIR$/views/tenshis_new.erb" />
+        <option value="$PROJECT_DIR$/views/tenshis_news.erb" />
+        <option value="$PROJECT_DIR$/views/update_user.erb" />
+        <option value="$PROJECT_DIR$/public/js/funciones.js" />
+        <option value="$PROJECT_DIR$/public/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/test/test_helper.rb" />
+        <option value="$PROJECT_DIR$/views/form.erb" />
+        <option value="$PROJECT_DIR$/Rakefile" />
+        <option value="$PROJECT_DIR$/public/css/bootstrap-theme.min.css" />
+        <option value="$PROJECT_DIR$/views/index.erb" />
+        <option value="$PROJECT_DIR$/public/css/global.css" />
+        <option value="$PROJECT_DIR$/views/tenshis.erb" />
+        <option value="$PROJECT_DIR$/views/edit.erb" />
+        <option value="$USER_HOME$/Rails/blog/app/controllers/comments_controller.rb" />
+        <option value="$USER_HOME$/Rails/blog/config/routes.rb" />
+        <option value="$USER_HOME$/Rails/blog/app/controllers/posts_controller.rb" />
+        <option value="$USER_HOME$/Rails/blog/app/views/posts/show.html.erb" />
+        <option value="$PROJECT_DIR$/views/username.erb" />
+        <option value="$PROJECT_DIR$/tenshitter_app.rb" />
+        <option value="$PROJECT_DIR$/public/js/functions.js" />
+        <option value="$PROJECT_DIR$/views/user.erb" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="776" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tenshitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Rails/blog" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="project.settings.patched" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\FAMILIA DE BARROS\RubymineProjects\tenshitter\public\js" />
+      <recent name="C:\Users\FAMILIA DE BARROS\RubymineProjects\tenshitter" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\FAMILIA DE BARROS\RubymineProjects\tenshitter\public" />
+      <recent name="C:\Users\FAMILIA DE BARROS\RubymineProjects\tenshitter" />
+      <recent name="C:\Users\FAMILIA DE BARROS\RubymineProjects\tenshitter\views" />
+      <recent name="C:\Users\FAMILIA DE BARROS\RubymineProjects\tenshitter\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.test_follow: tenshitter">
+    <configuration default="false" name="test_follow: tenshitter" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="tenshitter" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/test/models" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/models/user_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_follow" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_retenshee: tenshitter" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="tenshitter" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/test/models" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/models/user_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_retenshee" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_reply: tenshitter" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="tenshitter" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/test/models" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/models/user_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_reply" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_unfollow: tenshitter" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="tenshitter" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/test/models" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/models/user_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_unfollow" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="tenshitter_app" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="tenshitter" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/tenshitter_app.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
+    <list size="9">
+      <item index="0" class="java.lang.String" itemvalue="Rails.Development: blog" />
+      <item index="1" class="java.lang.String" itemvalue="Rails.Production: blog" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.spec: blog" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.test: blog" />
+      <item index="4" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_follow: tenshitter" />
+      <item index="5" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_retenshee: tenshitter" />
+      <item index="6" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_reply: tenshitter" />
+      <item index="7" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_unfollow: tenshitter" />
+      <item index="8" class="java.lang.String" itemvalue="Ruby.tenshitter_app" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Ruby.tenshitter_app" />
+        <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_unfollow: tenshitter" />
+        <item index="2" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_reply: tenshitter" />
+        <item index="3" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_retenshee: tenshitter" />
+        <item index="4" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_follow: tenshitter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="547ab2a8-286e-4148-848b-b8596364e7c0" name="Default" comment="" />
+      <created>1395938166850</created>
+      <updated>1395938166850</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32327586" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32327586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../one_hundred_twitter/env.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../one_hundred_twitter/twitter_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="25" selection-start="932" selection-end="932" vertical-scroll-proportion="0.4" vertical-offset="310" max-vertical-offset="1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../rack_examples/email2/mail_app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="9" selection-start="253" selection-end="253" vertical-scroll-proportion="0.03820225" vertical-offset="170" max-vertical-offset="714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../rack_examples/email/mail_app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="34" selection-start="323" selection-end="323" vertical-scroll-proportion="0.3552239" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../rack_examples/email3/lib/mail_app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="32" selection-start="216" selection-end="216" vertical-scroll-proportion="0.3044776" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Rails/blog/app/models/comment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="2" selection-start="37" selection-end="37" vertical-scroll-proportion="0.025373135" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../one_hundred_twitter/twitter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="20" selection-start="193" selection-end="193" vertical-scroll-proportion="0.07462686" vertical-offset="137" max-vertical-offset="884" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../one_hundred_twitter/main.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="3" selection-start="527" selection-end="835" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/twitter_client-master/twitter_client-master/twitter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="18" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.0" vertical-offset="329" max-vertical-offset="1615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ru">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenshittergithub/models/tenshi.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/sexyalertbox.v1.2.jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="24" selection-start="4169" selection-end="4175" vertical-scroll-proportion="0.33280507" vertical-offset="1932" max-vertical-offset="7123" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenshittergithub/tenshitter_app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="5" selection-start="507" selection-end="507" vertical-scroll-proportion="0.5449011" vertical-offset="33" max-vertical-offset="1428" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap-theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="348" column="0" selection-start="14937" selection-end="14937" vertical-scroll-proportion="0.8428351" vertical-offset="5369" max-vertical-offset="6018" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="657" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/sexyalertbox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="47284" selection-start="47451" selection-end="47454" vertical-scroll-proportion="0.16164818" vertical-offset="0" max-vertical-offset="631" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrations/001_create_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="18" selection-start="217" selection-end="229" vertical-scroll-proportion="0.20955315" vertical-offset="0" max-vertical-offset="649" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrations/002_create_tenshis.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="30" selection-start="313" selection-end="313" vertical-scroll-proportion="0.2881356" vertical-offset="0" max-vertical-offset="649" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrations/003_create_followers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="18" selection-start="173" selection-end="173" vertical-scroll-proportion="0.12686567" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrations/004_rename_followers_to_relationships.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="5" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0761194" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrations/005_rename_user_name_to_username.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrations/006_rename_tenshis_attributes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/relationship.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.1522388" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/tenshi.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.22835821" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.2587519" vertical-offset="0" max-vertical-offset="657" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/models/user_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="28" selection-start="413" selection-end="431" vertical-scroll-proportion="-0.29402986" vertical-offset="401" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="13" selection-start="79" selection-end="79" vertical-scroll-proportion="0.02587519" vertical-offset="0" max-vertical-offset="657" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="10" selection-start="319" selection-end="319" vertical-scroll-proportion="0.38059703" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.32985073" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="757" selection-end="757" vertical-scroll-proportion="0.6850746" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/form.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="56" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.97670805" vertical-offset="0" max-vertical-offset="1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tenshis_news.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="24" selection-start="24" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="623" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/env.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="127" selection-end="127" vertical-scroll-proportion="0.10149254" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap-theme.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="11" selection-start="13214" selection-end="13220" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="247" column="18" selection-start="3728" selection-end="3728" vertical-scroll-proportion="0.2739726" vertical-offset="4019" max-vertical-offset="5525" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="12" selection-start="723" selection-end="723" vertical-scroll-proportion="0.6196513" vertical-offset="0" max-vertical-offset="1054" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/edit.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="18" selection-start="2019" selection-end="2019" vertical-scroll-proportion="-10.153846" vertical-offset="603" max-vertical-offset="1309" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tenshis.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="77" selection-start="3455" selection-end="3470" vertical-scroll-proportion="0.6497623" vertical-offset="899" max-vertical-offset="1530" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Rails/blog/app/controllers/comments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="39" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="1377" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Rails/blog/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="3" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Rails/blog/app/controllers/posts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="39" selection-start="1915" selection-end="1915" vertical-scroll-proportion="0.0" vertical-offset="809" max-vertical-offset="1479" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Rails/blog/app/views/comments/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="670" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Rails/blog/app/views/posts/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="3" selection-start="419" selection-end="419" vertical-scroll-proportion="0.6335404" vertical-offset="0" max-vertical-offset="663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/username.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="17" selection-start="2632" selection-end="2632" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="12" selection-start="3101" selection-end="3101" vertical-scroll-proportion="0.0" vertical-offset="933" max-vertical-offset="1564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenshitter_app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="32" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="5" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="12" selection-start="2778" selection-end="2778" vertical-scroll-proportion="0.0" vertical-offset="1654" max-vertical-offset="2397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinatra.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="670">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

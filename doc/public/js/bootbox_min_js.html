@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>bootbox.min.js - RDoc Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../public/css/bootstrap-theme_css.html">bootstrap-theme.css</a>
+  
+    <li><a href="../../public/css/bootstrap-theme_css_map.html">bootstrap-theme.css.map</a>
+  
+    <li><a href="../../public/css/bootstrap-theme_min_css.html">bootstrap-theme.min.css</a>
+  
+    <li><a href="../../public/css/bootstrap_css.html">bootstrap.css</a>
+  
+    <li><a href="../../public/css/bootstrap_css_map.html">bootstrap.css.map</a>
+  
+    <li><a href="../../public/css/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../public/css/global_css.html">global.css</a>
+  
+    <li><a href="../../public/fonts/glyphicons-halflings-regular_svg.html">glyphicons-halflings-regular.svg</a>
+  
+    <li><a href="../../public/js/bootbox_min_js.html">bootbox.min.js</a>
+  
+    <li><a href="../../public/js/bootstrap_js.html">bootstrap.js</a>
+  
+    <li><a href="../../public/js/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../public/js/functions_js.html">functions.js</a>
+  
+    <li><a href="../../public/js/jquery_easing_1_3_js.html">jquery.easing.1.3.js</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page public/js/bootbox.min.js">
+
+<pre>bootbox.js v4.2.0
+
+http://bootboxjs.com/license.txt</pre>
+
+<p>!function(a,b){“use strict”;“function”==typeof <a
+href=""jquery"">define&&define.amd?define(</a>,b):“object”==typeof
+exports?module.exports=b(require(“jquery”)):a.bootbox=b(a.jQuery)}(this,function
+a(b,c){“use strict”;function d(a){var <a href="o.locale">b=q</a>;return <a
+href="a">b?b</a>:<a href="a">q.en</a>}function
+e(a,c,d){a.stopPropagation(),a.preventDefault();var
+e=b.isFunction(d)&amp;&amp;d(a)===!1;e||c.modal(“hide”)}function f(a){var
+b,c=0;for(b in a)c++;return c}function g(a,c){var
+d=0;b.each(a,function(a,b){c(a,b,d++)})}function h(a){var
+c,d;if(“object”!=typeof a)throw new Error(“Please supply an object of
+options”);if(!a.message)throw new Error(“Please specify a message”);return
+a=b.extend({},o,a),a.buttons||(a.buttons={}),a.backdrop=a.backdrop?“static”:!1,c=a.buttons,d=f©,g(c,function(a,e,f){<a
+href="a">if(b.isFunction(e)&&(e=c</a>={callback:e}),“object”!==b.type(e))throw
+new Error(“button with key ”<code>a</code>“ must be an
+object”);e.label||(e.label=a),e.className||(e.className=2&gt;=d&amp;&amp;f===d-1?“btn-info”:“btn-info”)}),a}function
+i(a,b){var c=a.length,d={};if(1&gt;c||c&gt;2)throw new Error(“Invalid
+argument length”);return 2===c||“string”==typeof <a href="0">a</a>?(<a
+href="0">d[b</a>]=<a href="0">a</a>,<a href="1">d[b</a>]=<a
+href="1">a</a>):<a href="0">d=a</a>,d}function j(a,c,d){return
+b.extend(!0,{},a,i(c,d))}function k(a,b,c,d){var
+e={className:“bootbox-”+a,buttons:l.apply(null,b)};return
+m(j(e,d,c),b)}function l(){for(var
+a={},b=0,c=arguments.length;c&gt;b;b++){var <a href="b">e=arguments</a>,<a
+href="f">f=e.toLowerCase(),g=e.toUpperCase();a</a>={label:d(g)}}return
+a}function m(a,b){var d={};return g(b,function(a,b){<a
+href="b">d</a>=!0}),g(a.buttons,function(a){<a href="a">if(d</a>===c)throw
+new Error(“button key ”<code>a</code>“ is not allowed (options are
+”+b.join(“n”)+“)”)}),a}var n={dialog:“&lt;div class=&#39;bootbox modal&#39;
+tabindex=&#39;-1&#39; role=&#39;dialog&#39;&gt;&lt;div
+class=&#39;modal-dialog&#39;&gt;&lt;div
+class=&#39;modal-content&#39;&gt;&lt;div
+class=&#39;modal-body&#39;&gt;&lt;div
+class=&#39;bootbox-body&#39;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;”,header:“&lt;div
+class=&#39;modal-header&#39;&gt;&lt;h4
+class=&#39;modal-title&#39;&gt;&lt;/h4&gt;&lt;/div&gt;”,footer:“&lt;div
+class=&#39;modal-footer&#39;&gt;&lt;/div&gt;”,closeButton:“&lt;button
+type=&#39;button&#39; class=&#39;bootbox-close-button close&#39;
+data-dismiss=&#39;modal&#39;
+aria-hidden=&#39;true&#39;&gt;&amp;times;&lt;/button&gt;”,form:“&lt;form
+class=&#39;bootbox-form&#39;&gt;&lt;/form&gt;”,inputs:{text:“&lt;input
+class=&#39;bootbox-input bootbox-input-text form-control&#39;
+autocomplete=off type=text /&gt;”,textarea:“&lt;textarea
+class=&#39;bootbox-input bootbox-input-textarea
+form-control&#39;&gt;&lt;/textarea&gt;”,email:“&lt;input
+class=&#39;bootbox-input bootbox-input-email form-control&#39;
+autocomplete=&#39;off&#39; type=&#39;email&#39; /&gt;”,select:“&lt;select
+class=&#39;bootbox-input bootbox-input-select
+form-control&#39;&gt;&lt;/select&gt;”,checkbox:“&lt;div
+class=&#39;checkbox&#39;&gt;&lt;label&gt;&lt;input class=&#39;bootbox-input
+bootbox-input-checkbox&#39; type=&#39;checkbox&#39;
+/&gt;&lt;/label&gt;&lt;/div&gt;”,date:“&lt;input class=&#39;bootbox-input
+bootbox-input-date form-control&#39; autocomplete=off type=&#39;date&#39;
+/&gt;”,time:“&lt;input class=&#39;bootbox-input bootbox-input-time
+form-control&#39; autocomplete=off type=&#39;time&#39;
+/&gt;”,number:“&lt;input class=&#39;bootbox-input bootbox-input-number
+form-control&#39; autocomplete=off type=&#39;number&#39;
+/&gt;”,password:“&lt;input class=&#39;bootbox-input bootbox-input-password
+form-control&#39; autocomplete=&#39;off&#39; type=&#39;password&#39;
+/&gt;”}},o={locale:“en”,backdrop:!0,animate:!0,className:null,closeButton:!0,show:!0,container:“body”},p={};p.alert=function(){var
+<a
+href=""ok"">a;if(a=k(“alert”,</a>,[“message”,“callback”],arguments),a.callback&amp;&amp;!b.isFunction(a.callback))throw
+new Error(“alert requires callback property to be a function when
+provided”);return a.buttons.ok.callback=a.onEscape=function(){return
+b.isFunction(a.callback)?a.callback():!0},p.dialog(a)},p.confirm=function(){var
+<a
+href=""cancel","confirm"">a;if(a=k(“confirm”,</a>,[“message”,“callback”],arguments),a.buttons.cancel.callback=a.onEscape=function(){return
+a.callback(!1)},a.buttons.confirm.callback=function(){return
+a.callback(!0)},!b.isFunction(a.callback))throw new Error(“confirm requires
+a callback”);return p.dialog(a)},p.prompt=function(){var
+a,d,e,f,h,i,k;f=b(n.form),d={className:“bootbox-prompt”,buttons:l(“cancel”,“confirm”),value:“”,inputType:“text”},<a
+href=""title","callback"">a=m(j(d,arguments,</a>),[“cancel”,“confirm”]),i=a.show===c?!0:a.show;var
+<a href=""date","time","number"">o=</a>,<a
+href="a.inputType">q=document.createElement(“input”);if(q.setAttribute(“type”,a.inputType),o</a>&amp;&amp;(a.inputType=q.type),a.message=f,a.buttons.cancel.callback=a.onEscape=function(){return
+a.callback(null)},a.buttons.confirm.callback=function(){var
+c;switch(a.inputType){case“text”:case“textarea”:case“email”:case“select”:case“date”:case“time”:case“number”:case“password”:c=h.val();break;case“checkbox”:var
+d=h.find(“input:checked”);c=[],g(d,function(a,d){c.push(b(d).val())})}return
+a.callback©},a.show=!1,!a.title)throw new Error(“prompt requires a
+title”);if(!b.isFunction(a.callback))throw new Error(“prompt requires a <a
+href="a.inputType">callback”);if(!n.inputs</a>)throw new Error(“invalid
+prompt <a
+href="a.inputType">type”);switch(h=b(n.inputs</a>),a.inputType){case“text”:case“textarea”:case“email”:case“date”:case“time”:case“number”:case“password”:h.val(a.value);break;case“select”:var
+r={};if(k=a.inputOptions||[],!k.length)throw new Error(“prompt with select
+requires options”);g(k,function(a,d){var
+e=h;if(d.value===c||d.text===c)throw new Error(“given options in wrong <a
+href="d.group">format”);d.group&&(r</a>||(<a href="d.group">r</a>=<a
+href="d.group">b(“<optgroup/>”).attr(“label”,d.group)),e=r</a>),e.append(“&lt;option
+value=&#39;”<code>d.value</code>“&#39;&gt;”<code>d.text</code>“&lt;/option&gt;”)}),g(r,function(a,b){h.append(b)}),h.val(a.value);break;case“checkbox”:var
+<a
+href="a.value">s=b.isArray(a.value)?a.value:</a>;if(k=a.inputOptions||[],!k.length)throw
+new Error(“prompt with checkbox requires <a href="0">options”);if(!k</a>.<a
+href="0">value||!k</a>.text)throw new Error(“given options in wrong
+format”);h=b(“&lt;div/&gt;”),g(k,function(c,d){var <a
+href="a.inputType">e=b(n.inputs</a>);e.find(“input”).attr(“value”,d.value),e.find(“label”).append(d.text),g(s,function(a,b){b===d.value&amp;&amp;e.find(“input”).prop(“checked”,!0)}),h.append(e)})}return
+a.placeholder&amp;&amp;h.attr(“placeholder”,a.placeholder),a.pattern&amp;&amp;h.attr(“pattern”,a.pattern),f.append(h),f.on(“submit”,function(a){a.preventDefault(),e.find(“.btn-info”).click()}),e=p.dialog(a),e.off(“shown.bs.modal”),e.on(“shown.bs.modal”,function(){h.focus()}),i===!0&amp;&amp;e.modal(“show”),e},p.dialog=function(a){a=h(a);var
+c=b(n.dialog),d=c.find(“.modal-body”),f=a.buttons,i=“”,j={onEscape:a.onEscape};if(g(f,function(a,b){i+=“&lt;button
+data-bb-handler=&#39;”<code>a</code>“&#39; type=&#39;button&#39;
+class=&#39;btn
+”<code>b.className"'>"b.label"</button>",j[a]</code>=b.callback}),d.find(“.bootbox-body”).html(a.message),a.animate===!0&amp;&amp;c.addClass(“fade”),a.className&amp;&amp;c.addClass(a.className),a.title&amp;&amp;d.before(n.header),a.closeButton){var
+k=b(n.closeButton);a.title?c.find(“.modal-header”).prepend(k):k.css(“margin-top”,“-10px”).prependTo(d)}return
+a.title&amp;&amp;c.find(“.modal-title”).html(a.title),i.length&amp;&amp;(d.after(n.footer),c.find(“.modal-footer”).html(i)),c.on(“hidden.bs.modal”,function(a){a.target===this&amp;&amp;c.remove()}),c.on(“shown.bs.modal”,function(){c.find(“.btn-info:first”).focus()}),c.on(“escape.close.bb”,function(a){j.onEscape&amp;&amp;e(a,c,j.onEscape)}),c.on(“click”,“.modal-footer
+button”,function(a){var <a
+href="d">d=b(this).data(“bb-handler”);e(a,c,j</a>)}),c.on(“click”,“.bootbox-close-button”,function(a){e(a,c,j.onEscape)}),c.on(“keyup”,function(a){27===a.which&amp;&amp;c.trigger(“escape.close.bb”)}),b(a.container).append©,c.modal({backdrop:a.backdrop,keyboard:!1,show:!1}),a.show&amp;&amp;c.modal(“show”),c},p.setDefaults=function(){var
+a={};<a href="0">2===arguments.length?a[arguments</a>]=<a
+href="1">arguments</a>:<a
+href="0">a=arguments</a>,b.extend(o,a)},p.hideAll=function(){b(“.bootbox”).modal(“hide”)};var
+q={br:{OK:“OK”,CANCEL:“Cancelar”,CONFIRM:“Sim”},da:{OK:“OK”,CANCEL:“Annuller”,CONFIRM:“Accepter”},de:{OK:“OK”,CANCEL:“Abbrechen”,CONFIRM:“Akzeptieren”},en:{OK:“OK”,CANCEL:“Cancel”,CONFIRM:“OK”},es:{OK:“OK”,CANCEL:“Cancelar”,CONFIRM:“Aceptar”},fi:{OK:“OK”,CANCEL:“Peruuta”,CONFIRM:“OK”},fr:{OK:“OK”,CANCEL:“Annuler”,CONFIRM:“D&#39;accord”},he:{OK:“אישור”,CANCEL:“ביטול”,CONFIRM:“אישור”},it:{OK:“OK”,CANCEL:“Annulla”,CONFIRM:“Conferma”},lt:{OK:“Gerai”,CANCEL:“Atšaukti”,CONFIRM:“Patvirtinti”},lv:{OK:“Labi”,CANCEL:“Atcelt”,CONFIRM:“Apstiprināt”},nl:{OK:“OK”,CANCEL:“Annuleren”,CONFIRM:“Accepteren”},no:{OK:“OK”,CANCEL:“Avbryt”,CONFIRM:“OK”},pl:{OK:“OK”,CANCEL:“Anuluj”,CONFIRM:“Potwierdź”},ru:{OK:“OK”,CANCEL:“Отмена”,CONFIRM:“Применить”},sv:{OK:“OK”,CANCEL:“Avbryt”,CONFIRM:“OK”},tr:{OK:“Tamam”,CANCEL:“İptal”,CONFIRM:“Onayla”},zh_CN:{OK:“OK”,CANCEL:“取消”,CONFIRM:“确认”},zh_TW:{OK:“OK”,CANCEL:“取消”,CONFIRM:“確認”}};return
+p.init=function©{return a(c||b)},p});</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
