@@ -1,5 +1,0 @@
-ENV["ADAPTER"] = 'mysql2'
-ENV["DATABASE"] = 'tenshitter_test'
-ENV["USERNAME"] = 'root'
-ENV["PASSWORD"] = '573300'
-ENV["HOST"] = 'localhost'
