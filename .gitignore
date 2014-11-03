@@ -16,7 +16,6 @@ tmp
 .yardoc
 _yardoc
 doc/
-env.rb
 .idea
 db/*.sqlite3
 test/env.rb
