@@ -10,6 +10,8 @@ class TenshitterApp < Nancy::Base
   use Rack::Session::Cookie, secret: ENV['SECRET_TOKEN']
   use Rack::Static, :root => "public", :urls => ["/js", "/css", "/fonts", "/images"]
 
+  after { ActiveRecord::Base.connection.close }
+
   get "/" do
     render "views/index.erb"
   end
