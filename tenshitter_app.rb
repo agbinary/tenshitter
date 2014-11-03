@@ -80,6 +80,9 @@ class TenshitterApp < Nancy::Base
         session["user_id"] = user.id
         session["search_user"] = user.id
         response.redirect("/tenshis")
+      else
+        @error_index = true
+        render "views/index.erb"
       end
     else
       @error_index = true
